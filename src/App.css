@@ -1,0 +1,54 @@
+:root {
+  --primary: #102e60;
+  --primaryDark: #002b62;
+  --white: #ffffff;
+}
+html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
+  .wrapper
+  .leftside-menu
+  .side-nav
+  .side-nav-item:hover
+  .side-nav-link {
+  position: relative;
+  color: var(--white);
+  background: var(--primary);
+  width: var(--ct-leftbar-width);
+}
+html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
+  .wrapper
+  .leftside-menu
+  .side-nav
+  .side-nav-item:hover
+  > .collapse
+  > ul,
+html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
+  .wrapper
+  .leftside-menu
+  .side-nav
+  .side-nav-item:hover
+  > .collapsing
+  > ul {
+  background: var(--primary);
+}
+.image_box {
+  position: relative;
+  width: 100%;
+  max-width: 120px;
+}
+.image_box button {
+  position: absolute;
+  right: -21px;
+  padding: 10px 14px;
+  top: -11px;
+}
+.images.image_box_list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.btn-primary {
+  background-color: var(--primaryDark);
+}
+.btn-primary:hover {
+  background-color: var(--primaryDark);
+}
