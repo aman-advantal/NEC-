@@ -123,7 +123,7 @@ export const LeftSidebar = () => {
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.STAFF_DIRECTORY}>
                 <i class="uil-package"></i>
                 <span> Staff Directory</span>
               </Link>

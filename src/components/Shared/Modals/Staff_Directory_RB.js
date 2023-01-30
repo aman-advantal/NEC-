@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Jodit from "../Include/jodit";
 
-export const Rec_RB = () => {
-  const [date, setDate] = useState();
-
+export const StaffDirectory_RB = () => {
   return (
     <>
       <div
-        id="rec_of_city_modal"
+        id="Staff_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -23,7 +21,7 @@ export const Rec_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Recruitments
+                Add Staff Directory
               </h4>
               <button
                 type="button"
@@ -36,39 +34,14 @@ export const Rec_RB = () => {
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Title
+                    Name
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="tenderName"
                     required
-                    placeholder="Job Title"
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
-                    Department
-                  </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="gostitle"
-                    required
-                    placeholder="Department"
-                  />
-                </div>
-                <div className=" mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
-                    Address
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="example-textarea"
-                    rows={5}
-                    style={{ height: 55 }}
-                    defaultValue={""}
+                    placeholder="  Name"
                   />
                 </div>
                 <div className="mb-3">
@@ -77,48 +50,61 @@ export const Rec_RB = () => {
                   </label>
                   <input
                     className="form-control"
-                    type="email"
-                    id="gostitle"
+                    type="text"
+                    id="tenderName"
                     required
-                    placeholder="Enter email"
+                    placeholder=" Email"
                   />
                 </div>
-
-                {/* date */}
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Publish Date
+                  <label htmlFor="title" className="form-label">
+                    Contact Number
                   </label>
                   <input
                     className="form-control"
-                    type="date"
-                    id="date"
+                    type="text"
+                    id="tenderName"
                     required
-                    onChange={(e) => setDate(e.target.value)}
+                    placeholder=" Contact Number"
                   />
                 </div>
 
-                {/* date */}
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Last Date
+                  <label htmlFor="title" className="form-label">
+                    Designation
                   </label>
                   <input
                     className="form-control"
-                    type="date"
-                    id="date"
+                    type="text"
+                    id="tenderName"
                     required
-                    onChange={(e) => setDate(e.target.value)}
+                    placeholder=" Designation"
                   />
                 </div>
-
-                <div className="row">
-                  <div className="col-12 mb-3">
-                    <label htmlFor="example-textarea" className="form-label">
-                      Description
-                    </label>
-                    <Jodit />
-                  </div>
+                <div className="mb-3">
+                  <label htmlFor="title" className="form-label">
+                    Department
+                  </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    id="tenderName"
+                    required
+                    placeholder=" Department"
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="example-textarea" className="form-label">
+                    Office Address
+                  </label>
+                  <textarea
+                    className="form-control"
+                    id="example-textarea"
+                    rows={3}
+                    // style={{ height: 55 }}
+                    defaultValue={""}
+                    placeholder="Office Address"
+                  />
                 </div>
               </div>
               <div className="modal-footer">

@@ -20,9 +20,6 @@ export const ROUTES = {
   POLICY: process.env.PUBLIC_URL + "/policy",
   // Recruitments
   RECRUITMENT: process.env.PUBLIC_URL + "/recruitment",
-
-  NEWS_REPORT: process.env.PUBLIC_URL + "/news-report",
-  CITY_REPORT: process.env.PUBLIC_URL + "/city-report",
-  SPORT_REPORT: process.env.PUBLIC_URL + "/sport-report",
-  ADD_CITY: process.env.PUBLIC_URL + "/add-city",
+  // Staff Directory
+  STAFF_DIRECTORY:process.env.PUBLIC_URL + "/staff-directory",
 };

@@ -18,6 +18,7 @@ import About_city from "../pages/City/About_city";
 import { Recruitments } from "../pages/Recruitment/Recruitments";
 import { Policies } from "../pages/policy/Policies";
 import { Tender } from "../pages/Tender/Tender";
+import { StaffDirectory } from "../pages/StaffDirectory/StaffDirectory";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -100,6 +101,11 @@ export const AppRouter = () => {
       key: 16,
       path: ROUTES.TENDER,
       component: Tender,
+    },
+    {
+      key: 17,
+      path: ROUTES.STAFF_DIRECTORY,
+      component: StaffDirectory,
     },
 
     // END City Routing
