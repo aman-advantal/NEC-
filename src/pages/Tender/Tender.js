@@ -1,14 +1,14 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
-
-export const Where_to_stay = () => {
+import React from "react";
+import Tender_RB from "../../components/Shared/Modals/Tender_RB";
+export const Tender = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
+          title={"Tender of City"}
           title1={"City"}
-          title2={"Where to stay"}
+          title2={"Tender of City"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -20,9 +20,9 @@ export const Where_to_stay = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
+                    data-bs-target="#Tender_modal"
                   >
-                    Add Where to stay
+                    Add Tender
                   </button>
                 </div>
               </div>
@@ -40,24 +40,42 @@ export const Where_to_stay = () => {
                   >
                     <thead>
                       <tr>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
-                        <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
-                        <th>Acion</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Last Submission Date</th>
+                        <th>Status</th>
+
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>NEC</td>
+                        <td>Open</td>
+                        <td>Tender description </td>
+                        <td>12/12/2022 </td>
+                        <td>1/1/2023</td>
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="Yes"
+                              data-off-label="No"
+                              className="mb-0 d-block"
+                            />
+                          </div>
+                        </td>
+
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -77,7 +95,7 @@ export const Where_to_stay = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
+        <Tender_RB />   
       </div>
     </>
   );

@@ -1,14 +1,15 @@
+import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
+import Policies_RB from "../../components/Shared/Modals/Policies_RB";
 
-export const Where_to_stay = () => {
+export const Policies = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
-          title1={"City"}
-          title2={"Where to stay"}
+          title={"Important GOs & Policies"}
+          title1={"GOs/Policies"}
+          title2={"Important Policies"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -20,9 +21,9 @@ export const Where_to_stay = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
+                    data-bs-target="#policies_of_city_modal"
                   >
-                    Add Where to stay
+                    Add Policies
                   </button>
                 </div>
               </div>
@@ -40,24 +41,41 @@ export const Where_to_stay = () => {
                   >
                     <thead>
                       <tr>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
-                        <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
+                        <th>Policy Name</th>
+                        <th>Date</th>
+                        <th>Policy Description</th>
+                        <th>Attachment</th>
                         <th>Acion</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>Indian Agriculture</td>
+                        <td>12/09/2021</td>
+                        <td>
+                          Indian Agriculture :Policy Suggestion first ever since
+                          independence.{" "}
+                        </td>
+                        <td>Link link</td>
+                        <td>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-pencil" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-delete" />
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Indian Agriculture</td>
+                        <td>12/09/2021</td>
+                        <td>
+                          Indian Agriculture :Policy Suggestion The NDA
+                          government.{" "}
+                        </td>
+                        <td>Link link</td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -77,7 +95,7 @@ export const Where_to_stay = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
+        <Policies_RB />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import { Places_to_visit_RB } from "../../components/Shared/Modals/Places_to_visit_RB";
 
 export const Places_to_visit = () => {

@@ -1,4 +1,4 @@
-import { SubHeader } from "../components/Shared/SubHeader";
+import { SubHeader } from "../../components/Shared/common/SubHeader";
 
 export const Home = () => {
   return (

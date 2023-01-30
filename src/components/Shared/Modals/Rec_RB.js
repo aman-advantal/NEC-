@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Jodit from "../Include/jodit";
-import Multi_image from "../Include/Multi_image";
 
-const Art_craft_RB = () => {
+export const Rec_RB = () => {
+  const [date, setDate] = useState();
+
+  console.log("Date", date);
+
   return (
     <>
       <div
-        id="Art_of_city_modal"
+        id="rec_of_city_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -22,7 +25,7 @@ const Art_craft_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Art & Craft
+                Add Recruitments
               </h4>
               <button
                 type="button"
@@ -40,15 +43,24 @@ const Art_craft_RB = () => {
                   <input
                     className="form-control"
                     type="text"
-                    id="arttitle"
+                    id="gostitle"
                     required
-                    placeholder="Art and Craft Title"
+                    placeholder="Job Title"
                   />
                 </div>
-                <div className="mb-3">
-                  <Multi_image title=" Images" />
-                </div>
 
+                <div className=" mb-3">
+                  <label htmlFor="example-textarea" className="form-label">
+                    Department
+                  </label>
+                  <textarea
+                    className="form-control"
+                    id="example-textarea"
+                    rows={5}
+                    style={{ height: 55 }}
+                    defaultValue={""}
+                  />
+                </div>
                 <div className=" mb-3">
                   <label htmlFor="example-textarea" className="form-label">
                     Address
@@ -62,27 +74,46 @@ const Art_craft_RB = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Contact No.
+                  <label htmlFor="title" className="form-label">
+                    Email
                   </label>
                   <input
                     className="form-control"
-                    type="number"
-                    id="username"
+                    type="email"
+                    id="gostitle"
                     required
-                    placeholder=" Contact No."
+                    placeholder="Enter email"
                   />
                 </div>
+
+                {/* date */}
                 <div className="mb-3">
-                  <label htmlFor="example-select" className="form-label">
-                    Location
+                  <label htmlFor="username" className="form-label">
+                    Publish Date
                   </label>
-                  <select className="form-select" id="example-select">
-                    <option>Select</option>
-                    <option>Veena Nagar</option>
-                    <option>Vijay nagar</option>
-                  </select>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
                 </div>
+
+                {/* date */}
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                    Last Date
+                  </label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </div>
+
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">
@@ -117,5 +148,3 @@ const Art_craft_RB = () => {
     </>
   );
 };
-
-export default Art_craft_RB;

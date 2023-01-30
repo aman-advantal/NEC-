@@ -30,6 +30,13 @@ html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
   > ul {
   background: var(--primary);
 }
+.breadcrumb {
+  --ct-breadcrumb-divider-color: var(--primaryDark);
+  --ct-breadcrumb-item-active-color: var(--primaryDark);
+}
+.breadcrumb li a {
+  color: var(--primaryDark);
+}
 .image_box {
   position: relative;
   width: 100%;

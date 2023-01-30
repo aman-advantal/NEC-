@@ -1,4 +1,4 @@
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Festival_of_city_RB from "../../components/Shared/Modals/Festival_of_city_RB";
 import React from "react";
 

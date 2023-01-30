@@ -1,36 +1,24 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Jodit from "../Include/jodit";
 import Multi_image from "../Include/Multi_image";
 
 const Festival_of_city_RB = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
-
   const [date, setDate] = useState();
 
-  const onSelectFile = (event) => {
-    const selectedFiles = event.target.files;
-    // console.log(selectedFiles);
-    const selectedFilesArray = Array.from(selectedFiles);
-
-    const imagesArray = selectedFilesArray.map((file) => {
-      return URL.createObjectURL(file);
-    });
-    setSelectedImages((previousImages) => previousImages.concat(imagesArray));
-  };
   console.log("Date", date);
 
   return (
-  <>
-  <div
-    id="festival_of_city_modal"
-    className="modal fade"
-    tabIndex={-1}
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div className="modal-dialog">
-      <div className="modal-content">
+    <>
       <div
+        id="festival_of_city_modal"
+        className="modal fade"
+        tabIndex={-1}
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div
               className="modal-header"
               style={{
                 background: `var(--primaryDark)`,
@@ -47,27 +35,24 @@ const Festival_of_city_RB = () => {
                 aria-label="Close"
               />
             </div>
-            <form  action="#">
-        <div className="modal-body">
-          
-          
-            <div className="mb-3">
-              <label htmlFor="title" className="form-label">
-                Festival Title
-              </label>
-              <input
-                className="form-control"
-                type="text"
-                id="festivaltitle"
-                required
-                placeholder="Festival Title"
-              />
-            </div>
-            <div className="mb-3">
-
-            <Multi_image title="Festival Images" />
-            </div>
-            {/* <div className="mb-3">
+            <form action="#">
+              <div className="modal-body">
+                <div className="mb-3">
+                  <label htmlFor="title" className="form-label">
+                    Festival Title
+                  </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    id="festivaltitle"
+                    required
+                    placeholder="Festival Title"
+                  />
+                </div>
+                <div className="mb-3">
+                  <Multi_image title="Festival Images" />
+                </div>
+                {/* <div className="mb-3">
               <label htmlFor="images" className="form-label">
                 Add Images
                 <br />
@@ -139,21 +124,21 @@ const Festival_of_city_RB = () => {
                   })}    
               </div>
             </div> */}
-            {/* date */}
-            <div className="mb-3">
-              <label htmlFor="username" className="form-label">
-                 Festival Date
-              </label>
-              <input
-                className="form-control"
-                type="date"
-                id="date"
-                required
-                onChange={(e) => setDate(e.target.value)}
-              />
-            </div>
+                {/* date */}
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                    Festival Date
+                  </label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </div>
 
-            {/* <div className="mb-3">
+                {/* <div className="mb-3">
               <label for="example-textarea" class="form-label">
                 Festival Description
               </label>
@@ -164,41 +149,39 @@ const Festival_of_city_RB = () => {
                 placeholder="Description"
               ></textarea>
             </div> */}
-            <div className="row">
-                <div className="col-12 mb-3">
-                <label htmlFor="example-textarea" className="form-label">
-                    Festival Description
-                  </label>
-                  <Jodit/>
+                <div className="row">
+                  <div className="col-12 mb-3">
+                    <label htmlFor="example-textarea" className="form-label">
+                      Festival Description
+                    </label>
+                    <Jodit />
+                  </div>
                 </div>
-                
               </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ border: "none" }}
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+          {/* /.modal-content */}
         </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-light"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                style={{  border: "none" }}
-              >
-                Save
-              </button>
-            </div>
-          </form>
-       
+        {/* /.modal-dialog */}
       </div>
-      {/* /.modal-content */}
-    </div>
-    {/* /.modal-dialog */}
-  </div>
-</>
-);
+    </>
+  );
 };
 
 export default Festival_of_city_RB;

@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, useState } from "react";
 import JoditEditor from "jodit-react";
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Multi_image from "../../components/Shared/Include/Multi_image";
 
 const About_city = () => {

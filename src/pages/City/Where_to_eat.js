@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import { Where_to_eat_RB } from "../../components/Shared/Modals/Where_to_eat_RB";
 
 export const Where_to_eat = () => {

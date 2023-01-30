@@ -117,7 +117,7 @@ export const LeftSidebar = () => {
             </li>
 
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.TENDER}>
                 <i class="uil-comments-alt"></i>
                 <span> Tenders </span>
               </Link>
@@ -129,7 +129,7 @@ export const LeftSidebar = () => {
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.POLICY}>
                 <i class="uil-store"></i>
                 <span> GO/Policies</span>
               </Link>
@@ -142,7 +142,7 @@ export const LeftSidebar = () => {
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.RECRUITMENT}>
                 <i class="uil-clipboard-alt"></i>
                 <span> Recruitments</span>
               </Link>

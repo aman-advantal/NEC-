@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Art_craft_RB from "../../components/Shared/Modals/Art_craft_RB";
 
 export const Art_craft = () => {

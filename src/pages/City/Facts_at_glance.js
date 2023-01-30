@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { CustomHeader } from "../../components/Shared/CustomHeader";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 
 export const Facts_at_glance = () => {
   return (

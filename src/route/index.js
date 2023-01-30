@@ -1,7 +1,7 @@
 import React from "react";
 import { Content } from "../components/Layout/content";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Home } from "../pages/home";
+import { Home } from "../pages/Home/home";
 import { ROUTES } from "./constant";
 import { Login } from "../pages/Auth/Login ";
 import { Topbar } from "../components/Layout/Topbar";
@@ -15,6 +15,9 @@ import { Places_to_visit } from "../pages/City/Places_to_visit";
 import { Facts_at_glance } from "../pages/City/Facts_at_glance";
 import { City_event } from "../pages/City/City_event";
 import About_city from "../pages/City/About_city";
+import { Recruitments } from "../pages/Recruitment/Recruitments";
+import { Policies } from "../pages/policy/Policies";
+import { Tender } from "../pages/Tender/Tender";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -82,6 +85,21 @@ export const AppRouter = () => {
       key: 13,
       path: ROUTES.CITY_EVENT,
       component: City_event,
+    },
+    {
+      key: 14,
+      path: ROUTES.RECRUITMENT,
+      component: Recruitments,
+    },
+    {
+      key: 15,
+      path: ROUTES.POLICY,
+      component: Policies,
+    },
+    {
+      key: 16,
+      path: ROUTES.TENDER,
+      component: Tender,
     },
 
     // END City Routing

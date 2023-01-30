@@ -1,14 +1,15 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
+import React from "react";
+import { Rec_RB } from "../../components/Shared/Modals/Rec_RB";
 
-export const Where_to_stay = () => {
+export const Recruitments = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
-          title1={"City"}
-          title2={"Where to stay"}
+          title={"Recruitments"}
+          title1={"Recruitments"}
+          title2={"Recruitment"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -20,9 +21,9 @@ export const Where_to_stay = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
+                    data-bs-target="#rec_of_city_modal"
                   >
-                    Add Where to stay
+                    Add Recruitments
                   </button>
                 </div>
               </div>
@@ -40,24 +41,44 @@ export const Where_to_stay = () => {
                   >
                     <thead>
                       <tr>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
+                        <th>Job Title</th>
+                        <th>Department</th>
+                        <th>Address</th>
                         <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
-                        <th>Acion</th>
+                        <th>Publish Date</th>
+                        <th>Last Date</th>
+                        <th>Description</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>Software developer</td>
+                        <td>Trainee</td>
+                        <td>hcjv </td>
+                        <td>Trainee@gmail.com</td>
+                        <td>18/03/2010</td>
+                        <td>18/04/2010</td>
+                        <td>Construction of EWS house</td>
+                        <td>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-pencil" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-delete" />
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Software developer</td>
+                        <td>Trainee</td>
+                        <td>hcjv </td>
+                        <td>Trainee@gmail.com</td>
+                        <td>18/03/2010</td>
+                        <td>18/04/2010</td>
+                        <td>Construction of EWS houses</td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -77,7 +98,7 @@ export const Where_to_stay = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
+        <Rec_RB />
       </div>
     </>
   );

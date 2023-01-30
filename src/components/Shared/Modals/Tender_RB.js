@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Jodit from "../Include/jodit";
-import Multi_image from "../Include/Multi_image";
-
-const Art_craft_RB = () => {
+const Tender_RB = () => {
+  const [date, setDate] = useState();
+  console.log("Date", date);
   return (
     <>
       <div
-        id="Art_of_city_modal"
+        id="Tender_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -22,7 +22,7 @@ const Art_craft_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Art & Craft
+                Add Tenders
               </h4>
               <button
                 type="button"
@@ -35,58 +35,56 @@ const Art_craft_RB = () => {
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Title
+                    Tender Name
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="arttitle"
+                    id="tenderName"
                     required
-                    placeholder="Art and Craft Title"
-                  />
-                </div>
-                <div className="mb-3">
-                  <Multi_image title=" Images" />
-                </div>
-
-                <div className=" mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
-                    Address
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="example-textarea"
-                    rows={5}
-                    style={{ height: 55 }}
-                    defaultValue={""}
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Contact No.
-                  </label>
-                  <input
-                    className="form-control"
-                    type="number"
-                    id="username"
-                    required
-                    placeholder=" Contact No."
+                    placeholder=" Tender Name"
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="example-select" className="form-label">
-                    Location
+                   Tender Category
                   </label>
                   <select className="form-select" id="example-select">
                     <option>Select</option>
-                    <option>Veena Nagar</option>
-                    <option>Vijay nagar</option>
+                    <option>Open Tender</option>
+                    <option>Serial Tender</option>
+                    <option>Selective Tender</option>
                   </select>
                 </div>
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                    Tender Date
+                  </label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                    Last Date Submission
+                  </label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </div>
+
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">
-                      Description
+                      Tender Description
                     </label>
                     <Jodit />
                   </div>
@@ -117,5 +115,4 @@ const Art_craft_RB = () => {
     </>
   );
 };
-
-export default Art_craft_RB;
+export default Tender_RB;
