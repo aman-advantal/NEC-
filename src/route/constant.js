@@ -24,6 +24,10 @@ export const ROUTES = {
   STAFF_DIRECTORY: process.env.PUBLIC_URL + "/staff-directory",
   // community
   COMMUNITY_SERVICE: process.env.PUBLIC_URL + "/community-service",
+  VOLUNTEER_DETAIL:process.env.PUBLIC_URL + "/community-service/volunteer-detail",
   //
   EDUCATION_INSTITUTION: process.env.PUBLIC_URL + "/educational-institution",
+  // sport Facility
+  SPORT_FACILITY:process.env.PUBLIC_URL + "/sport-facility",
+  EVENT:process.env.PUBLIC_URL + "/sport-facility/event",
 };

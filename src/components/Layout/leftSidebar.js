@@ -160,7 +160,7 @@ export const LeftSidebar = () => {
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.SPORT_FACILITY}>
                 <i class="uil-globe"></i>
                 <span> Sport Facility</span>
               </Link>

@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import Jodit from "../Include/jodit";
 import Multi_image from "../Include/Multi_image";
 
-const Community_RB = () => {
-  const [date, setDate] = useState();
-
-  console.log("Date", date);
-
+export const Ground_EVENT = () => {
   return (
     <>
       <div
-        id="community_of_city_modal"
+        id="Ground_Event_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -26,7 +20,7 @@ const Community_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Community Service
+                Add Events
               </h4>
               <button
                 type="button"
@@ -38,67 +32,46 @@ const Community_RB = () => {
             <form action="#">
               <div className="modal-body">
                 <div className="mb-3">
-                  <label htmlFor="example-multiselect" className="form-label">
-                    Community service
-                  </label>
-                  <select
-                    id="example-multiselect"
-                    multiple=""
-                    className="form-control"
-                  >
-                    <option>Activities</option>
-                    <option>Events</option>
-                  </select>
-                </div>
-
-                <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Activity/Events Name
+                    Name
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="festivaltitle"
+                    id="tenderName"
                     required
-                    placeholder="Activity name"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
-                    Contact Number
-                  </label>
-                  <input
-                    className="form-control"
-                    type="number"
-                    id="festivaltitle"
-                    required
-                    placeholder="contact"
+                    placeholder="  Name"
                   />
                 </div>
 
                 <div className="mb-3">
-                  <label for="example-textarea" class="form-label">
-                    Address
+                  <label htmlFor="example-textarea" className="form-label">
+                    Description
                   </label>
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     id="example-textarea"
-                    rows="3"
-                    placeholder="address"
-                  ></textarea>
+                    rows={3}
+                    // style={{ height: 55 }}
+                    defaultValue={""}
+                    placeholder="Office Address"
+                  />
                 </div>
-                <div className="row">
-                  <div className="col-12 mb-3">
-                    <Multi_image title="Events/Activity Images" />
-                  </div>
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                     Date
+                  </label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    id="date"
+                    required
+                    // onChange={(e) => setDate(e.target.value)}
+                  />
                 </div>
-                <div className="row">
-                  <div className="col-12 mb-3">
-                    <label htmlFor="example-textarea" className="form-label">
-                      Events/Activity Description
-                    </label>
-                    <Jodit />
-                  </div>
+                
+                <div className="mb-3">
+                  <Multi_image title=" Event Image (Optional)" />
                 </div>
               </div>
               <div className="modal-footer">
@@ -126,5 +99,3 @@ const Community_RB = () => {
     </>
   );
 };
-
-export default Community_RB;

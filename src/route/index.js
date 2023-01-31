@@ -21,6 +21,9 @@ import { Tender } from "../pages/Tender/Tender";
 import { StaffDirectory } from "../pages/StaffDirectory/StaffDirectory";
 import { Educational_Instituion } from "../pages/Educational-Institution/Educational_Institution";
 import { Community } from "../pages/community service/community";
+import { Volunteer } from "../pages/community service/volunteer/Volunteer";
+import { GroundDetail } from "../pages/Sport Facility/Sport";
+import { GroundEvent } from "../pages/Sport Facility/Event-Detail/Ground_Event";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -119,7 +122,21 @@ export const AppRouter = () => {
       path: ROUTES.COMMUNITY_SERVICE,
       component:Community,
     },
-
+    {
+      key: 20,
+      path: ROUTES.VOLUNTEER_DETAIL,
+      component:Volunteer,
+    },
+    {
+      key: 21,
+      path: ROUTES.SPORT_FACILITY,
+      component:GroundDetail,
+    },
+    {
+      key: 22,
+      path: ROUTES.EVENT,
+      component:GroundEvent,
+    },
     // END City Routing
   ];
   const loc = useLocation();

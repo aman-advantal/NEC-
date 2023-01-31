@@ -1,17 +1,16 @@
+import { Link} from "react-router-dom";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import React from "react";
-import Community_RB from "../../components/Shared/Modals/Community_RB";
-import { Link } from "react-router-dom";
+import { Ground_RB } from "../../components/Shared/Modals/Ground_RB";
 import { ROUTES } from "../../route/constant";
 
-export const Community = () => {
+export const GroundDetail = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Community Service"}
-          title1={"Community Service"}
-          title2={"Community service"}
+          title={"Sport Facility"}
+          title1={"Sport Facility"}
+          title2={"Ground Details"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -23,9 +22,9 @@ export const Community = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#community_of_city_modal"
+                    data-bs-target="#Ground_modal"
                   >
-                    Add Community Service
+                    Add Ground
                   </button>
                 </div>
               </div>
@@ -43,12 +42,9 @@ export const Community = () => {
                   >
                     <thead>
                       <tr>
-                        <th>Type</th>
                         <th>Name</th>
-                        <th>Contact</th>
-                        <th>Date</th>
                         <th>Address</th>
-                        {/* <th>Description</th> */}
+                        <th>Sports Available</th>
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
@@ -56,11 +52,10 @@ export const Community = () => {
 
                     <tbody>
                       <tr>
-                        <td>Event</td>
-                        <td>Mega Trade fair</td>
-                        <td>732532526</td>
-                        <td>20/01/23</td>
-                        <td>Abhay prashal Sports club</td>
+                        <td>Holkar</td>
+                        <td>Zanzeer wala Square</td>
+                        <td>cricket,football,Hockey</td>
+
                         <td>
                           {" "}
                           <div>
@@ -79,7 +74,7 @@ export const Community = () => {
                             />
                           </div>
                         </td>
-                        {/* <td>Construction of EWS house(PMAY).</td> */}
+
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -87,11 +82,8 @@ export const Community = () => {
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
                           </a>
-                          <a href="#" className="action-icon">
+                          <Link to={ROUTES.EVENT} className="action-icon">
                             <i className="uil uil-eye" />
-                          </a>
-                          <Link to={ROUTES.VOLUNTEER_DETAIL} className="action-icon">
-                            <i className=" mdi mdi-account-group" />
                           </Link>
                         </td>
                       </tr>
@@ -105,7 +97,7 @@ export const Community = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Community_RB />
+        <Ground_RB/>
       </div>
     </>
   );
