@@ -37,6 +37,9 @@ html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
 .breadcrumb li a {
   color: var(--primaryDark);
 }
+input[data-switch]:checked+label:after {
+  left: 45px;
+}
 .image_box {
   position: relative;
   width: 100%;

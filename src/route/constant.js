@@ -21,5 +21,9 @@ export const ROUTES = {
   // Recruitments
   RECRUITMENT: process.env.PUBLIC_URL + "/recruitment",
   // Staff Directory
-  STAFF_DIRECTORY:process.env.PUBLIC_URL + "/staff-directory",
+  STAFF_DIRECTORY: process.env.PUBLIC_URL + "/staff-directory",
+  // community
+  COMMUNITY_SERVICE: process.env.PUBLIC_URL + "/community-service",
+  //
+  EDUCATION_INSTITUTION: process.env.PUBLIC_URL + "/educational-institution",
 };

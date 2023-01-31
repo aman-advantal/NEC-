@@ -47,7 +47,9 @@ export const StaffDirectory = () => {
                         <th> Designation</th>
                         <th>Department</th>
                         <th>Office Address</th>
+                        <td>Status</td>
                         <th>Action</th>
+                        
                       </tr>
                     </thead>
 
@@ -59,6 +61,24 @@ export const StaffDirectory = () => {
                         <td>Officer</td>
                         <td>Muncipal</td>
                         <td>Vijay nagar scheme 54</td>
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
 
                         <td className="table-action">
                           <a href="#" className="action-icon">
@@ -68,6 +88,9 @@ export const StaffDirectory = () => {
                           <a href="#" className="action-icon">
                             {" "}
                             <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>

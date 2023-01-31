@@ -133,7 +133,7 @@ const Policies_RB = () => {
                   </div>
                 </div>
                 {/* date */}
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Date
                   </label>
@@ -144,7 +144,7 @@ const Policies_RB = () => {
                     required
                     onChange={(e) => setDate(e.target.value)}
                   />
-                </div>
+                </div> */}
 
                 {/* <div className="mb-3">
                     <label for="example-textarea" class="form-label">
@@ -160,7 +160,7 @@ const Policies_RB = () => {
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">
-                      Policy Description
+                      Policy Points
                     </label>
                     <Jodit />
                   </div>

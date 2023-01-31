@@ -50,7 +50,7 @@ export const StaffDirectory_RB = () => {
                   </label>
                   <input
                     className="form-control"
-                    type="text"
+                    type="email"
                     id="tenderName"
                     required
                     placeholder=" Email"
@@ -82,16 +82,15 @@ export const StaffDirectory_RB = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
+                  <label htmlFor="example-select" className="form-label">
                     Department
                   </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="tenderName"
-                    required
-                    placeholder=" Department"
-                  />
+                  <select className="form-select" id="example-select">
+                    <option>Select</option>
+                    <option>Muncipal</option>
+                    <option>Traffic</option>
+                    <option>Tender</option>
+                  </select>
                 </div>
                 <div className="mb-3">
                   <label htmlFor="example-textarea" className="form-label">

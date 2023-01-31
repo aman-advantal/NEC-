@@ -148,13 +148,13 @@ export const LeftSidebar = () => {
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.COMMUNITY_SERVICE}>
                 <i class="uil-folder-plus"></i>
                 <span> Community Services</span>
               </Link>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.EDUCATION_INSTITUTION}>
                 <i class="uil-copy-alt"></i>
                 <span> Educational Institutions</span>
               </Link>
@@ -244,19 +244,19 @@ export const LeftSidebar = () => {
                 </ul>
               </div>
             </li>
-            <li class="side-nav-item">
+            {/* <li class="side-nav-item">
               <Link class="side-nav-link">
                 <i class="uil-chart"></i>
                 <span> News & Events</span>
               </Link>
-            </li>
+            </li> */}
             <li class="side-nav-item">
               <Link class="side-nav-link">
                 <i class="uil-document-layout-center"></i>
                 <span> Feedbacks/Input</span>
               </Link>
             </li>
-            <li className="side-nav-item">
+            {/* <li className="side-nav-item">
               <a
                 data-bs-toggle="collapse"
                 href="#sidebarHelp"
@@ -279,8 +279,8 @@ export const LeftSidebar = () => {
                   </li>
                 </ul>
               </div>
-            </li>
-            <li className="side-nav-item">
+            </li> */}
+            {/* <li className="side-nav-item">
               <a
                 data-bs-toggle="collapse"
                 href="#sidebarPublic"
@@ -303,8 +303,8 @@ export const LeftSidebar = () => {
                   </li>
                 </ul>
               </div>
-            </li>
-            <li className="side-nav-item">
+            </li> */}
+            {/* <li className="side-nav-item">
               <a
                 data-bs-toggle="collapse"
                 href="#sidebarCitizen"
@@ -339,7 +339,7 @@ export const LeftSidebar = () => {
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> */}
             <li className="side-nav-item">
               <a
                 data-bs-toggle="collapse"

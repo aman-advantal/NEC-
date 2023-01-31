@@ -47,7 +47,8 @@ export const Recruitments = () => {
                         <th>Email</th>
                         <th>Publish Date</th>
                         <th>Last Date</th>
-                        <th>Description</th>
+                        {/* <th>Description</th> */}
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -60,13 +61,35 @@ export const Recruitments = () => {
                         <td>Trainee@gmail.com</td>
                         <td>18/03/2010</td>
                         <td>18/04/2010</td>
-                        <td>Construction of EWS house</td>
+                        {/* <td>Construction of EWS house</td> */}
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
+                          </a>
+
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>
@@ -78,13 +101,34 @@ export const Recruitments = () => {
                         <td>Trainee@gmail.com</td>
                         <td>18/03/2010</td>
                         <td>18/04/2010</td>
-                        <td>Construction of EWS houses</td>
+                        {/* <td>Construction of EWS houses</td> */}
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>

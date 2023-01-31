@@ -1,14 +1,15 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import React from "react";
-import Tender_RB from "../../components/Shared/Modals/Tender_RB";
-export const Tender = () => {
+import Community_RB from "../../components/Shared/Modals/Community_RB";
+
+export const Community = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Tender of City"}
-          title1={"City"}
-          title2={"Tender of City"}
+          title={"Community Service"}
+          title1={"Community Service"}
+          title2={"Community service"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -20,9 +21,9 @@ export const Tender = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#Tender_modal"
+                    data-bs-target="#community_of_city_modal"
                   >
-                    Add Tender
+                    Add Community Service
                   </button>
                 </div>
               </div>
@@ -40,30 +41,24 @@ export const Tender = () => {
                   >
                     <thead>
                       <tr>
+                        <th>Type</th>
                         <th>Name</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th>Attachment</th>
-                        {/* <th>Date</th> */}
-                        {/* <th>Last Submission Date</th> */}
+                        <th>Contact</th>
+                        <th>Date</th>
+                        <th>Address</th>
+                        {/* <th>Description</th> */}
                         <th>Status</th>
-
                         <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>NEC</td>
-                        <td>Open</td>
-                        <td>Tender description </td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i className=" mdi mdi-file-pdf-box " style={{fontSize:"20px"}} />
-                          </a>
-                        </td>
-
+                        <td>Event</td>
+                        <td>Mega Trade fair</td>
+                        <td>732532526</td>
+                        <td>20/01/23</td>
+                        <td>Abhay prashal Sports club</td>
                         <td>
                           {" "}
                           <div>
@@ -82,7 +77,7 @@ export const Tender = () => {
                             />
                           </div>
                         </td>
-
+                        {/* <td>Construction of EWS house(PMAY).</td> */}
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -105,7 +100,7 @@ export const Tender = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Tender_RB />   
+        <Community_RB />
       </div>
     </>
   );

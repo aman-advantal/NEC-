@@ -19,6 +19,8 @@ import { Recruitments } from "../pages/Recruitment/Recruitments";
 import { Policies } from "../pages/policy/Policies";
 import { Tender } from "../pages/Tender/Tender";
 import { StaffDirectory } from "../pages/StaffDirectory/StaffDirectory";
+import { Educational_Instituion } from "../pages/Educational-Institution/Educational_Institution";
+import { Community } from "../pages/community service/community";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -106,6 +108,16 @@ export const AppRouter = () => {
       key: 17,
       path: ROUTES.STAFF_DIRECTORY,
       component: StaffDirectory,
+    },
+    {
+      key: 18,
+      path: ROUTES.EDUCATION_INSTITUTION,
+      component: Educational_Instituion,
+    },
+    {
+      key: 19,
+      path: ROUTES.COMMUNITY_SERVICE,
+      component:Community,
     },
 
     // END City Routing

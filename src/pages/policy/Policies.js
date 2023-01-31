@@ -42,9 +42,10 @@ export const Policies = () => {
                     <thead>
                       <tr>
                         <th>Policy Name</th>
-                        <th>Date</th>
-                        <th>Policy Description</th>
+                        {/* <th>Date</th> */}
+                        <th>Policy Points</th>
                         <th>Attachment</th>
+                        <th>Status</th>
                         <th>Acion</th>
                       </tr>
                     </thead>
@@ -52,36 +53,89 @@ export const Policies = () => {
                     <tbody>
                       <tr>
                         <td>Indian Agriculture</td>
-                        <td>12/09/2021</td>
+                        {/* <td>12/09/2021</td> */}
+                        <td>Indian Agriculture :Policy</td>
                         <td>
-                          Indian Agriculture :Policy Suggestion first ever since
-                          independence.{" "}
+                          {" "}
+                          <a href="#" className="action-icon">
+                            <i
+                              className=" mdi mdi-file-pdf-box "
+                              style={{ fontSize: "20px" }}
+                            />
+                          </a>
                         </td>
-                        <td>Link link</td>
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>
-
                       <tr>
-                        <td>Indian Agriculture</td>
-                        <td>12/09/2021</td>
+                        <td>Governance</td>
+                        {/* <td>12/09/2021</td> */}
                         <td>
-                          Indian Agriculture :Policy Suggestion The NDA
-                          government.{" "}
+                          Indian Agriculture :Policy 
                         </td>
-                        <td>Link link</td>
+                        <td>
+                          {" "}
+                          <a href="#" className="action-icon">
+                            <i
+                              className=" mdi mdi-file-excel"
+                              style={{ fontSize: "20px" }}
+                            />
+                          </a>
+                        </td>
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>

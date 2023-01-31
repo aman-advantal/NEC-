@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Jodit from "../Include/jodit";
+import Multi_image from "../Include/Multi_image";
 const Tender_RB = () => {
   const [date, setDate] = useState();
   console.log("Date", date);
@@ -47,7 +48,7 @@ const Tender_RB = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="example-select" className="form-label">
-                   Tender Category
+                    Tender Category
                   </label>
                   <select className="form-select" id="example-select">
                     <option>Select</option>
@@ -56,7 +57,7 @@ const Tender_RB = () => {
                     <option>Selective Tender</option>
                   </select>
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Tender Date
                   </label>
@@ -79,8 +80,12 @@ const Tender_RB = () => {
                     required
                     onChange={(e) => setDate(e.target.value)}
                   />
+                </div> */}
+                <div className="row">
+                  <div className="col-12 mb-3">
+                    <Multi_image title="Attachment" />
+                  </div>
                 </div>
-
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">

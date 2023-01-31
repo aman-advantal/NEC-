@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import Jodit from "../Include/jodit";
+import Multi_image from "../Include/Multi_image";
 
-export const Rec_RB = () => {
+const Community_RB = () => {
   const [date, setDate] = useState();
+
+  console.log("Date", date);
 
   return (
     <>
       <div
-        id="rec_of_city_modal"
+        id="community_of_city_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -17,13 +20,10 @@ export const Rec_RB = () => {
           <div className="modal-content">
             <div
               className="modal-header"
-              style={{
-                background: `var(--primaryDark)`,
-                color: `var(--white)`,
-              }}
+              style={{ background: "rgb(0, 43, 98)", color: "#fff" }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Recruitments
+                Add Community Service
               </h4>
               <button
                 type="button"
@@ -34,61 +34,53 @@ export const Rec_RB = () => {
             </div>
             <form action="#">
               <div className="modal-body">
+             
+                  <div className="mb-3">
+                    <label htmlFor="example-multiselect" className="form-label">
+                      Community service
+                    </label>
+                    <select
+                      id="example-multiselect"
+                      multiple=""
+                      className="form-control"
+                    >
+                      <option>Activities</option>
+                      <option>Events</option>
+                    </select>
+                  </div>
+                
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Title
+                    Activity/Events Name
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="festivaltitle"
                     required
-                    placeholder="Job Title"
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
-                    Department
-                  </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="gostitle"
-                    required
-                    placeholder="Department"
+                    placeholder="Activity name"
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Email
+                    Contact Number
                   </label>
                   <input
                     className="form-control"
-                    type="email"
-                    id="gostitle"
+                    type="number"
+                    id="festivaltitle"
                     required
-                    placeholder="Enter email"
+                    placeholder="contact"
                   />
                 </div>
-                <div className=" mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
-                    Address
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="example-textarea"
-                    rows={5}
-                    style={{ height: 55 }}
-                    defaultValue={""}
-                  />
-                </div>
-               
+                {/* <div className="mb-3">
+                  <Multi_image title="Event Images" />
+                </div> */}
 
                 {/* date */}
                 {/* <div className="mb-3">
                   <label htmlFor="username" className="form-label">
-                    Publish Date
+                    Event Date
                   </label>
                   <input
                     className="form-control"
@@ -99,24 +91,21 @@ export const Rec_RB = () => {
                   />
                 </div> */}
 
-                {/* date */}
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Last Date
+                  <label for="example-textarea" class="form-label">
+                    Address
                   </label>
-                  <input
-                    className="form-control"
-                    type="date"
-                    id="date"
-                    required
-                    onChange={(e) => setDate(e.target.value)}
-                  />
+                  <textarea
+                    class="form-control"
+                    id="example-textarea"
+                    rows="3"
+                    placeholder="address"
+                  ></textarea>
                 </div>
-
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">
-                      Description
+                      Activity Description
                     </label>
                     <Jodit />
                   </div>
@@ -133,7 +122,7 @@ export const Rec_RB = () => {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  style={{ border: "none" }}
+                  style={{ background: "rgb(0, 43, 98)", border: "none" }}
                 >
                   Save
                 </button>
@@ -147,3 +136,5 @@ export const Rec_RB = () => {
     </>
   );
 };
+
+export default Community_RB;
