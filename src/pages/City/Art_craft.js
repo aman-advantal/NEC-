@@ -97,7 +97,7 @@ export const Art_craft = () => {
                       <tbody>
                         <tr>
                           <td>La Jarden Art & Craft</td>
-                          <td>134-A, near shri hari public school garden</td>
+                          <td>134-A, near shri hari public</td>
                           <td>087707 67573</td>
                           <td>Veena nagar</td>
                           <td>We are a India's wel..</td>
@@ -109,6 +109,11 @@ export const Art_craft = () => {
                             <a href="#" className="action-icon">
                               <i className="mdi mdi-delete" />
                             </a>
+                            
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
+
                           </td>
                         </tr>
                       </tbody>

@@ -88,8 +88,10 @@ export const Places_to_visit_RB = () => {
                     </label>
                     <select className="form-select" id="example-select">
                       <option>Select</option>
-                      <option>Tourism places</option>
+                      <option>Tourism Destination</option>
                       <option>Historical places</option>
+                      <option>Heritage Spot</option>
+                      
                     </select>
                   </div>
                 </div>

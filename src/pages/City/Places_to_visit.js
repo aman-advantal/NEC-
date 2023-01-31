@@ -110,21 +110,23 @@ export const Places_to_visit = () => {
                                   <td>Historical place</td>
                                   <td>Rajwada circle</td>
                                   <td>
-                                    <div>
-                                      <input
-                                        type="checkbox"
-                                        id="switch01"
-                                        defaultChecked=""
-                                        data-switch="success"
-                                      />
-                                      <label
-                                        htmlFor="switch01"
-                                        data-on-label="Yes"
-                                        data-off-label="No"
-                                        className="mb-0 d-block"
-                                      />
-                                    </div>
-                                  </td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
                                   <td>
                                     <a href="#" className="action-icon">
                                       <i className="mdi mdi-pencil" />
@@ -132,6 +134,10 @@ export const Places_to_visit = () => {
                                     <a href="#" className="action-icon">
                                       <i className="mdi mdi-delete" />
                                     </a>
+                                    
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
                                   </td>
                                 </tr>
                               </tbody>

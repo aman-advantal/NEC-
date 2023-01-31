@@ -60,6 +60,9 @@ export const Festival_of_city = () => {
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
                           </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
                         </td>
                       </tr>
                     </tbody>
@@ -74,6 +77,9 @@ export const Festival_of_city = () => {
                           </a>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
                           </a>
                         </td>
                       </tr>
