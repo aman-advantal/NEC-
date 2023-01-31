@@ -41,6 +41,7 @@ export const Recruitments = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Job Title</th>
                         <th>Department</th>
                         <th>Address</th>
@@ -55,6 +56,7 @@ export const Recruitments = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Software developer</td>
                         <td>Trainee</td>
                         <td>hcjv </td>
@@ -95,6 +97,7 @@ export const Recruitments = () => {
                       </tr>
 
                       <tr>
+                        <td>2</td>
                         <td>Software developer</td>
                         <td>Trainee</td>
                         <td>hcjv </td>

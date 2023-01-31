@@ -115,7 +115,37 @@ export const LeftSidebar = () => {
                 </ul>
               </div>
             </li>
+            <li className="side-nav-item">
+              <a
+                data-bs-toggle="collapse"
+                href="#sidebarStaff"
+                aria-expanded="false"
+                aria-controls="sidebarStaff"
+                className="side-nav-link"
+              >
+                <i class="uil-sitemap"></i>
 
+                <span> Staff Management </span>
+                <span className="menu-arrow" />
+              </a>
+              <div className="collapse" id="sidebarStaff">
+                <ul className="side-nav-second-level">
+                  <li>
+                    <Link to={ROUTES.ROLE}>Role</Link>
+                  </li>
+                  <li>
+                    <Link to={ROUTES.STAFF}>Staff</Link>
+                  </li>
+                  </ul>
+              </div>
+            </li>
+            
+            <li class="side-nav-item">
+              <Link class="side-nav-link" to={ROUTES.USERS}>
+                <i class="uil-user"></i>
+                <span> Users </span>
+              </Link>
+              </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.TENDER}>
                 <i class="uil-comments-alt"></i>
@@ -136,7 +166,7 @@ export const LeftSidebar = () => {
             </li>
 
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.DOWNLOAD}>
                 <i class="uil-briefcase"></i>
                 <span> Downloads</span>
               </Link>
@@ -214,35 +244,11 @@ export const LeftSidebar = () => {
                 <span> Health Service</span>
               </Link>
             </li>
-            <li className="side-nav-item">
-              <a
-                data-bs-toggle="collapse"
-                href="#sidebarInfo"
-                aria-expanded="false"
-                aria-controls="sidebarInfo"
-                className="side-nav-link"
-              >
-                <i class="uil-globe"></i>
-
-                <span> Emergency Services </span>
-                <span className="menu-arrow" />
-              </a>
-              <div className="collapse" id="sidebarInfo">
-                <ul className="side-nav-second-level">
-                  <li>
-                    <Link>Ambulance</Link>
-                  </li>
-                  <li>
-                    <Link>Fire</Link>
-                  </li>
-                  <li>
-                    <Link>Police</Link>
-                  </li>
-                  <li>
-                    <Link>Traffic</Link>
-                  </li>
-                </ul>
-              </div>
+            <li class="side-nav-item">
+              <Link class="side-nav-link" to={ROUTES.EMERGENCY_SERVICE}>
+                <i class="uil-layer-group"></i>
+                <span>Emergency Services</span>
+              </Link>
             </li>
             {/* <li class="side-nav-item">
               <Link class="side-nav-link">

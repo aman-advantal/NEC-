@@ -95,6 +95,7 @@ export const Places_to_visit = () => {
                             >
                               <thead>
                                 <tr>
+                                  <th>S.No</th>
                                   <th>Place Name</th>
                                   <th>Visiting Time</th>
                                   <th>Categories</th>
@@ -105,28 +106,29 @@ export const Places_to_visit = () => {
                               </thead>
                               <tbody>
                                 <tr>
+                                  <td>1</td>
                                   <td>Rajwada Palace</td>
                                   <td>9:00AM - 8:00PM</td>
                                   <td>Historical place</td>
                                   <td>Rajwada circle</td>
                                   <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
+                                    {" "}
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="switch01"
+                                        defaultChecked="true"
+                                        data-switch="success"
+                                      />
+                                      <label
+                                        htmlFor="switch01"
+                                        data-on-label="active"
+                                        data-off-label="Inactive"
+                                        className="mb-0 d-block"
+                                        style={{ width: "70px" }}
+                                      />
+                                    </div>
+                                  </td>
                                   <td>
                                     <a href="#" className="action-icon">
                                       <i className="mdi mdi-pencil" />
@@ -134,10 +136,10 @@ export const Places_to_visit = () => {
                                     <a href="#" className="action-icon">
                                       <i className="mdi mdi-delete" />
                                     </a>
-                                    
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
+
+                                    <a href="#" className="action-icon">
+                                      <i className="uil uil-eye" />
+                                    </a>
                                   </td>
                                 </tr>
                               </tbody>

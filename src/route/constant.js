@@ -18,6 +18,8 @@ export const ROUTES = {
   TENDER: process.env.PUBLIC_URL + "/tender",
   // Go policy
   POLICY: process.env.PUBLIC_URL + "/policy",
+  // DOWNLOAD
+  DOWNLOAD: process.env.PUBLIC_URL + "/download",
   // Recruitments
   RECRUITMENT: process.env.PUBLIC_URL + "/recruitment",
   // Staff Directory
@@ -30,4 +32,12 @@ export const ROUTES = {
   // sport Facility
   SPORT_FACILITY:process.env.PUBLIC_URL + "/sport-facility",
   EVENT:process.env.PUBLIC_URL + "/sport-facility/event",
+  // Ward
+  WARD_INFO:process.env.PUBLIC_URL + "/ward-info",
+  ROLE: process.env.PUBLIC_URL + "/role",
+  STAFF: process.env.PUBLIC_URL + "/staff",
+  // Users
+  USERS: process.env.PUBLIC_URL + "/user-details",
+  // emergency
+  EMERGENCY_SERVICE: process.env.PUBLIC_URL + "/emergency-service",
 };

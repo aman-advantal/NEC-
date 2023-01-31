@@ -38,6 +38,7 @@ export const Where_to_eat = () => {
                   <table className="table table-striped table-centered mb-0">
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Resturant</th>
                         <th>Category</th>
                         <th>Contact</th>
@@ -49,6 +50,7 @@ export const Where_to_eat = () => {
                     </thead>
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td className="table-user">Chotiwala Restaurant</td>
                         <td>Indian</td>
                         <td>9878989988</td>

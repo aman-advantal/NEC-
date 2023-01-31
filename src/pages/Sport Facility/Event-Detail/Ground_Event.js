@@ -36,6 +36,7 @@ export const GroundEvent = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Name</th>
                         <th>Date</th>
                         <th>Description</th>
@@ -47,6 +48,7 @@ export const GroundEvent = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Ranjhi Trophy</td>
                         <td>12/12/2022</td>
                         <td>Under-19 tournamnnet </td>
@@ -93,7 +95,7 @@ export const GroundEvent = () => {
           {/* end col*/}
         </div>
         {/* <Rec_RB /> */}
-        <Ground_EVENT/>
+        <Ground_EVENT />
       </div>
     </>
   );

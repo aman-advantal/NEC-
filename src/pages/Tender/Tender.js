@@ -40,6 +40,7 @@ export const Tender = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Name</th>
                         <th>Category</th>
                         <th>Description</th>
@@ -54,13 +55,17 @@ export const Tender = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>NEC</td>
                         <td>Open</td>
                         <td>Tender description </td>
                         <td>
                           {" "}
                           <a href="#" className="action-icon">
-                            <i className=" mdi mdi-file-pdf-box " style={{fontSize:"20px"}} />
+                            <i
+                              className=" mdi mdi-file-pdf-box "
+                              style={{ fontSize: "20px" }}
+                            />
                           </a>
                         </td>
 

@@ -1,15 +1,14 @@
-import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Policies_RB from "../../components/Shared/Modals/Policies_RB";
+import { Emergency_RB } from "../../components/Shared/Modals/Emergency_Service_RB";
 
-export const Policies = () => {
+export const EmergencyService = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Important GOs & Policies"}
-          title1={"GOs/Policies"}
-          title2={"Important Policies"}
+          title={"Emergency Services"}
+          title1={"Emergency Service"}
+          title2={"Service"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -21,9 +20,9 @@ export const Policies = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#policies_of_city_modal"
+                    data-bs-target="#Emergency_Service_modal"
                   >
-                    Add Policies
+                    Add Services
                   </button>
                 </div>
               </div>
@@ -42,30 +41,24 @@ export const Policies = () => {
                     <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Policy Name</th>
-                        {/* <th>Date</th> */}
-                        <th>Policy Points</th>
-                        <th>Attachment</th>
+                        <th>Service Type</th>
+                        <th>Contact Person</th>
+                        <th>Contact Number</th>
+
                         <th>Status</th>
-                        <th>Acion</th>
+
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Indian Agriculture</td>
-                        {/* <td>12/09/2021</td> */}
-                        <td>Indian Agriculture :Policy</td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-file-pdf-box "
-                              style={{ fontSize: "20px" }}
-                            />
-                          </a>
-                        </td>
+                        <td>Fire</td>
+                        <td>Aman</td>
+
+                        <td>112</td>
+
                         <td>
                           {" "}
                           <div>
@@ -84,6 +77,7 @@ export const Policies = () => {
                             />
                           </div>
                         </td>
+
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -98,20 +92,11 @@ export const Policies = () => {
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>Governance</td>
-                        {/* <td>12/09/2021</td> */}
-                        <td>
-                          Indian Agriculture :Policy 
-                        </td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-file-excel"
-                              style={{ fontSize: "20px" }}
-                            />
-                          </a>
-                        </td>
+                        <td>Traffic</td>
+                        <td>Aman</td>
+
+                        <td>198</td>
+
                         <td>
                           {" "}
                           <div>
@@ -130,6 +115,83 @@ export const Policies = () => {
                             />
                           </div>
                         </td>
+
+                        <td>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-pencil" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Police</td>
+                        <td>Sawan</td>
+
+                        <td>100</td>
+
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
+
+                        <td>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-pencil" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Ambulance</td>
+                        <td>Rohit</td>
+
+                        <td>108</td>
+
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
+
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -152,7 +214,8 @@ export const Policies = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Policies_RB />
+        {/* <Tender_RB />    */}
+        <Emergency_RB />
       </div>
     </>
   );

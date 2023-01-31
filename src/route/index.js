@@ -24,6 +24,12 @@ import { Community } from "../pages/community service/community";
 import { Volunteer } from "../pages/community service/volunteer/Volunteer";
 import { GroundDetail } from "../pages/Sport Facility/Sport";
 import { GroundEvent } from "../pages/Sport Facility/Event-Detail/Ground_Event";
+import { Ward } from "../pages/ward/Ward";
+import { Downloads } from "../pages/Download/Download";
+import { Staff } from "../pages/Staff_management/Staff";
+import { Role } from "../pages/Staff_management/Role";
+import { Users_details } from "../pages/Users/Users_details";
+import { EmergencyService } from "../pages/Emergency Services/EmergencySwervice";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -120,23 +126,53 @@ export const AppRouter = () => {
     {
       key: 19,
       path: ROUTES.COMMUNITY_SERVICE,
-      component:Community,
+      component: Community,
     },
     {
       key: 20,
       path: ROUTES.VOLUNTEER_DETAIL,
-      component:Volunteer,
+      component: Volunteer,
     },
     {
       key: 21,
       path: ROUTES.SPORT_FACILITY,
-      component:GroundDetail,
+      component: GroundDetail,
     },
     {
       key: 22,
       path: ROUTES.EVENT,
-      component:GroundEvent,
+      component: GroundEvent,
     },
+    {
+      key: 23,
+      path: ROUTES.WARD_INFO,
+      component: Ward,
+    },
+    {
+      key: 24,
+      path: ROUTES.DOWNLOAD,
+      component: Downloads,
+    },
+    {
+      key: 25,
+      path: ROUTES.ROLE,
+      component: Role,
+    },
+    {
+      key: 26,
+      path: ROUTES.STAFF,
+      component: Staff,
+    },
+    {
+      key: 27,
+      path: ROUTES.USERS,
+      component: Users_details,
+    },    
+    {
+      key: 28,
+      path: ROUTES.EMERGENCY_SERVICE,
+      component: EmergencyService,
+    },                                                                                                                                                                                                         
     // END City Routing
   ];
   const loc = useLocation();

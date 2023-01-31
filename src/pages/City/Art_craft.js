@@ -85,6 +85,7 @@ export const Art_craft = () => {
                     >
                       <thead>
                         <tr>
+                          <th>S.No</th>
                           <th>Title</th>
                           <th>Address</th>
                           <th>Contact</th>
@@ -96,6 +97,7 @@ export const Art_craft = () => {
 
                       <tbody>
                         <tr>
+                          <td>1</td>
                           <td>La Jarden Art & Craft</td>
                           <td>134-A, near shri hari public</td>
                           <td>087707 67573</td>

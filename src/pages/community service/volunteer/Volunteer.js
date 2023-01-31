@@ -21,6 +21,7 @@ export const Volunteer = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Name</th>
                         <th>Contact Number</th>
                         <th>Address</th>
@@ -35,6 +36,7 @@ export const Volunteer = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>aman</td>
                         <td>7999865647</td>
                         <td>Vijay nagar sch 84</td>

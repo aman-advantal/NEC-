@@ -43,6 +43,7 @@ export const Educational_Instituion = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                        <th>Type</th>
                         <th>Name</th>
                         <th>Address</th>
@@ -55,6 +56,7 @@ export const Educational_Instituion = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Private</td>
                         <td>Svvv</td>
                         <td>sawar road</td>

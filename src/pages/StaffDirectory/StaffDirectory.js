@@ -41,6 +41,7 @@ export const StaffDirectory = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th> Name</th>
                         <th>Email</th>
                         <th>Contact</th>
@@ -49,12 +50,12 @@ export const StaffDirectory = () => {
                         <th>Office Address</th>
                         <td>Status</td>
                         <th>Action</th>
-                        
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Rohit Jain</td>
                         <td>rohit@123.com</td>
                         <td>9989768364</td>

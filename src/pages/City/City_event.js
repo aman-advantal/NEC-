@@ -41,6 +41,7 @@ export const City_event = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Event Name</th>
                         <th>Event Date</th>
                         <th>Event Place</th>
@@ -52,6 +53,7 @@ export const City_event = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Divine Live</td>
                         <td>12-03-2023</td>
                         <td>Essentia luxury hotel</td>

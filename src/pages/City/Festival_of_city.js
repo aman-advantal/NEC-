@@ -41,6 +41,7 @@ export const Festival_of_city = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Festival Title</th>
                         <th>Festival Date</th>
                         <th>Festival Description</th>
@@ -50,6 +51,7 @@ export const Festival_of_city = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Rang Panchami</td>
                         <td>12 March</td>
                         <td>thisb sjncjc chbjdc</td>
@@ -68,6 +70,7 @@ export const Festival_of_city = () => {
                     </tbody>
                     <tbody>
                       <tr>
+                        <td>2</td>
                         <td>Holi</td>
                         <td>10 April</td>
                         <td>Holi holi holi</td>

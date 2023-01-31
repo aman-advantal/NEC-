@@ -1,14 +1,13 @@
-import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
+import { CustomHeader } from "../../components/Shared/common/CustomHeader"
 
-export const Where_to_stay = () => {
-  return (
-    <>
-      <div>
+export const Ward=()=>{
+    return(
+        <>
+        <div>
         <CustomHeader
-          title={"Where to stay"}
-          title1={"City"}
-          title2={"Where to stay"}
+          title={"Ward Information"}
+          title1={"Wards Info"}
+          title2={"Ward Info"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -20,9 +19,9 @@ export const Where_to_stay = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
+                    data-bs-target="#Ward_modal"
                   >
-                    Add Where to stay
+                    Add Ward Info
                   </button>
                 </div>
               </div>
@@ -40,27 +39,26 @@ export const Where_to_stay = () => {
                   >
                     <thead>
                       <tr>
-                        <th>S.No</th>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
+                        <th> Name</th>
                         <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
-                        <th>Status</th>
-                        <th>Acion</th>
+                        <th>Contact</th>
+                        <th> Designation</th>
+                        <th>Department</th>
+                        <th>Office Address</th>
+                        <td>Status</td>
+                        <th>Action</th>
+                        
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>1</td>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>Rohit Jain</td>
+                        <td>rohit@123.com</td>
+                        <td>9989768364</td>
+                        <td>Officer</td>
+                        <td>Muncipal</td>
+                        <td>Vijay nagar scheme 54</td>
                         <td>
                           {" "}
                           <div>
@@ -79,11 +77,14 @@ export const Where_to_stay = () => {
                             />
                           </div>
                         </td>
-                        <td>
+
+                        <td className="table-action">
                           <a href="#" className="action-icon">
+                            {" "}
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
+                            {" "}
                             <i className="mdi mdi-delete" />
                           </a>
                           <a href="#" className="action-icon">
@@ -101,8 +102,9 @@ export const Where_to_stay = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
+        {/* <StaffDirectory_RB /> */}
       </div>
-    </>
-  );
-};
+
+        </>
+    )
+}

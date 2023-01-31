@@ -1,4 +1,4 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import { Ground_RB } from "../../components/Shared/Modals/Ground_RB";
 import { ROUTES } from "../../route/constant";
@@ -42,7 +42,8 @@ export const GroundDetail = () => {
                   >
                     <thead>
                       <tr>
-                        <th>Name</th>
+                        <th>S.No</th>
+                        <th> Ground Name</th>
                         <th>Address</th>
                         <th>Sports Available</th>
                         <th>Status</th>
@@ -52,6 +53,7 @@ export const GroundDetail = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Holkar</td>
                         <td>Zanzeer wala Square</td>
                         <td>cricket,football,Hockey</td>
@@ -97,7 +99,7 @@ export const GroundDetail = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Ground_RB/>
+        <Ground_RB />
       </div>
     </>
   );

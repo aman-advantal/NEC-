@@ -1,34 +1,17 @@
+import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
+import { Role_RB } from "../../components/Shared/Modals/Role_RB";
 
-export const Where_to_stay = () => {
+export const Role = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
-          title1={"City"}
-          title2={"Where to stay"}
+          title={"Roles"}
+          title1={"Staff Managemet"}
+          title2={"Role"}
         />
-        <div className="row ">
-          <div className="col-lg-12">
-            <div className="card p-2">
-              <div className="row g-0 align-items-center">
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                  <button
-                    type="button"
-                    class="btn btn-primary "
-                    style={{ border: "none" }}
-                    data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
-                  >
-                    Add Where to stay
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
@@ -40,29 +23,23 @@ export const Where_to_stay = () => {
                   >
                     <thead>
                       <tr>
-                        <th>S.No</th>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
-                        <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
+                        <th>S No.</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Created At</th>
                         <th>Status</th>
-                        <th>Acion</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>Admin</td>
+                        <td>jio jhg fgh..</td>
+                        <td>30-01-2023</td>
+
                         <td>
-                          {" "}
                           <div>
                             <input
                               type="checkbox"
@@ -72,15 +49,21 @@ export const Where_to_stay = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
+                              data-on-label="Active"
                               data-off-label="Inactive"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
                           </div>
                         </td>
-                        <td>
-                          <a href="#" className="action-icon">
+
+                        <td className="table-action">
+                          <a
+                            href="#"
+                            className="action-icon"
+                            data-bs-toggle="modal"
+                            data-bs-target="#Role_RB"
+                          >
                             <i className="mdi mdi-pencil" />
                           </a>
                           <a href="#" className="action-icon">
@@ -93,15 +76,15 @@ export const Where_to_stay = () => {
                       </tr>
                     </tbody>
                   </table>
-                </div>{" "}
+                </div>
                 {/* end row*/}
-              </div>{" "}
+              </div>
             </div>
             {/* end card*/}
-          </div>{" "}
+          </div>
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
+        <Role_RB />
       </div>
     </>
   );

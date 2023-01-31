@@ -43,6 +43,7 @@ export const Community = () => {
                   >
                     <thead>
                       <tr>
+                        <th>S.No</th>
                         <th>Type</th>
                         <th>Name</th>
                         <th>Contact</th>
@@ -56,6 +57,7 @@ export const Community = () => {
 
                     <tbody>
                       <tr>
+                        <td>1</td>
                         <td>Event</td>
                         <td>Mega Trade fair</td>
                         <td>732532526</td>

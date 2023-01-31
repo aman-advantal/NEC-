@@ -1,34 +1,16 @@
+import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
 
-export const Where_to_stay = () => {
+export const Users_details = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
-          title1={"City"}
-          title2={"Where to stay"}
+          title={"User Details"}
+          title1={"Users"}
+          title2={"User Details"}
         />
-        <div className="row ">
-          <div className="col-lg-12">
-            <div className="card p-2">
-              <div className="row g-0 align-items-center">
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                  <button
-                    type="button"
-                    class="btn btn-primary "
-                    style={{ border: "none" }}
-                    data-bs-toggle="modal"
-                    data-bs-target="#place_to_stay_modal"
-                  >
-                    Add Where to stay
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
@@ -41,28 +23,27 @@ export const Where_to_stay = () => {
                     <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
+                        <th> Name</th>
                         <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
+                        <th>Contact</th>
+                        <th>Create By</th>
+                        <th>Create At</th>
+                        <th>Role</th>
                         <th>Status</th>
-                        <th>Acion</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
+                        <td>Rohit Jain</td>
+                        <td>rohit@123.com</td>
+                        <td>9989768364</td>
+                        <td>Admin</td>
+                        <td>30-01-2023</td>
+                        <td>Manager</td>
                         <td>
-                          {" "}
                           <div>
                             <input
                               type="checkbox"
@@ -72,14 +53,15 @@ export const Where_to_stay = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
+                              data-on-label="Active"
                               data-off-label="Inactive"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
                           </div>
                         </td>
-                        <td>
+
+                        <td className="table-action">
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
                           </a>
@@ -93,15 +75,14 @@ export const Where_to_stay = () => {
                       </tr>
                     </tbody>
                   </table>
-                </div>{" "}
+                </div>
                 {/* end row*/}
-              </div>{" "}
+              </div>
             </div>
             {/* end card*/}
-          </div>{" "}
+          </div>
           {/* end col*/}
         </div>
-        <Where_to_stay_RB />
       </div>
     </>
   );
