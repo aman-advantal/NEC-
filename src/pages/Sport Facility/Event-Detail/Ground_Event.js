@@ -18,7 +18,7 @@ export const GroundEvent = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#Ground_Event_modal"
                   >
-                    Add Events
+                    Add Event
                   </button>
                 </div>
               </div>
@@ -64,8 +64,8 @@ export const GroundEvent = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

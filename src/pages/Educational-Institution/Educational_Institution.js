@@ -1,8 +1,5 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import React from "react";
-import Community_RB from "../../components/Shared/Modals/Community_RB";
-import { Link } from "react-router-dom";
-import { ROUTES } from "../../route/constant";
 import Edu_RB from "../../components/Shared/Modals/Institutionanal_RB";
 export const Educational_Instituion = () => {
   return (
@@ -10,7 +7,7 @@ export const Educational_Instituion = () => {
       <div>
         <CustomHeader
           title={"Educational Institutions"}
-          title1={"Educational Institutions"}
+          title1={"Nec"}
           title2={"Educational Institution"}
         />
         <div className="row ">
@@ -74,8 +71,8 @@ export const Educational_Instituion = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

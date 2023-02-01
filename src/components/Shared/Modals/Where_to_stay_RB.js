@@ -22,7 +22,7 @@ const Where_to_stay_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Where to stay
+                Add Where to Stay
               </h4>
               <button
                 type="button"
@@ -84,7 +84,7 @@ const Where_to_stay_RB = () => {
                 <div className="col-4">
                   <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
-                      Email address
+                      Email Address
                     </label>
                     <input
                       type="email"
@@ -160,7 +160,7 @@ const Where_to_stay_RB = () => {
                 <div className="col-4">
                   <div className="mb-3">
                     <label for="example-textarea" class="form-label">
-                      Resturant Available
+                      Restaurant Available
                     </label>
                     <div className="mt-2">
                       <div className="form-check form-check-inline">

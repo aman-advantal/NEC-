@@ -45,8 +45,8 @@ export const Volunteer = () => {
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-pdf-box "
-                              style={{ fontSize: "20px" }}
+                              className=" mdi mdi-file-pdf-box  text-primary"
+                              style={{ fontSize: "25px" }}
                             />
                           </a>
                         </td>
@@ -61,26 +61,14 @@ export const Volunteer = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
                           </div>
                         </td>
-                        {/* <td>Construction of EWS house(PMAY).</td> */}
-                        {/* <td>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                         
-                        </td> */}
+                     
                       </tr>
                       <tr>
                         <td>2</td>
@@ -92,8 +80,8 @@ export const Volunteer = () => {
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-pdf-box "
-                              style={{ fontSize: "20px" }}
+                              className=" mdi mdi-file-pdf-box  text-primary "
+                              style={{ fontSize: "25px"}}
                             />
                           </a>
                         </td>
@@ -108,8 +96,8 @@ export const Volunteer = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

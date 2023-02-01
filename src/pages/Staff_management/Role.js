@@ -9,7 +9,7 @@ export const Role = () => {
         <CustomHeader
           title={"Roles"}
           title1={"Staff Managemet"}
-          title2={"Role"}
+          title2={"Roles"}
         />
 
         <div className="row ">
@@ -36,7 +36,7 @@ export const Role = () => {
                       <tr>
                         <td>1</td>
                         <td>Admin</td>
-                        <td>jio jhg fgh..</td>
+                        <td>user description</td>
                         <td>30-01-2023</td>
 
                         <td>

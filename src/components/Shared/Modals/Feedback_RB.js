@@ -1,10 +1,14 @@
-import Multi_image from "../Include/Multi_image";
+import { useState } from "react";
 
-export const Ground_EVENT = () => {
+export const FeedBack_Comment_RB = () => {
+  const [date, setDate] = useState();
+
+  console.log("Date", date);
+
   return (
     <>
       <div
-        id="Ground_Event_modal"
+        id="Comment_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -20,7 +24,7 @@ export const Ground_EVENT = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Event
+                Add Comment
               </h4>
               <button
                 type="button"
@@ -31,32 +35,33 @@ export const Ground_EVENT = () => {
             </div>
             <form action="#">
               <div className="modal-body">
+                {/* <div className="col-4"> */}
                 <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
-                    Name
+                  <label htmlFor="example-select" className="form-label">
+                    Status
                   </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="tenderName"
-                    required
-                    placeholder="  Name"
-                  />
+                  <select className="form-select" id="example-select">
+                    <option>Select</option>
+                    <option>Pending </option>
+                    <option>In Progress</option>
+                    <option>Closed</option>
+                    <option>Reopen</option>
+                  </select>
+                  {/* </div> */}
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
-                    Description
+                  <label for="example-textarea" class="form-label">
+                    Comment
                   </label>
                   <textarea
-                    className="form-control"
+                    class="form-control"
                     id="example-textarea"
-                    rows={3}
-                    // style={{ height: 55 }}
-                    defaultValue={""}
-                    placeholder="Description"
-                  />
+                    rows="5"
+                    placeholder="Comment"
+                  ></textarea>
                 </div>
+
                 <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Date
@@ -66,12 +71,8 @@ export const Ground_EVENT = () => {
                     type="date"
                     id="date"
                     required
-                    // onChange={(e) => setDate(e.target.value)}
+                    onChange={(e) => setDate(e.target.value)}
                   />
-                </div>
-
-                <div className="mb-3">
-                  <Multi_image title=" Event Image (Optional)" />
                 </div>
               </div>
               <div className="modal-footer">

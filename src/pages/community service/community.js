@@ -10,7 +10,7 @@ export const Community = () => {
       <div>
         <CustomHeader
           title={"Community Service"}
-          title1={"Community Service"}
+          title1={"Nec"}
           title2={"Community service"}
         />
         <div className="row ">
@@ -74,8 +74,8 @@ export const Community = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

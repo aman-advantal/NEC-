@@ -88,29 +88,29 @@ export const LeftSidebar = () => {
                     <Link to={ROUTES.ABOUT_CITY}>About City</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.HOW_TO_REACH}>How to reach</Link>
+                    <Link to={ROUTES.HOW_TO_REACH}>How to Reach</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.FESTIVAL_OF_CITY}>Festival of city</Link>
+                    <Link to={ROUTES.FESTIVAL_OF_CITY}>Festival of City</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.WHERE_TO_STAY}>Where to stay</Link>
+                    <Link to={ROUTES.WHERE_TO_STAY}>Where to Stay</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.WHERE_TO_EAT}>Where to eat</Link>
+                    <Link to={ROUTES.WHERE_TO_EAT}>Where to Eat</Link>
                   </li>
                   <li>
                     <Link to={ROUTES.ART_CRAFT}>Art & Craft</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.PLACES_TO_VISIT}>Places to visit</Link>
+                    <Link to={ROUTES.PLACES_TO_VISIT}>Places to Visit</Link>
                   </li>
 
                   <li>
-                    <Link to={ROUTES.FACT_AT_GLANCE}>Facts at glance</Link>
+                    <Link to={ROUTES.FACT_AT_GLANCE}>Facts at a Glance</Link>
                   </li>
                   <li>
-                    <Link to={ROUTES.CITY_EVENT}>City event</Link>
+                    <Link to={ROUTES.CITY_EVENT}>City Event</Link>
                   </li>
                 </ul>
               </div>
@@ -136,16 +136,16 @@ export const LeftSidebar = () => {
                   <li>
                     <Link to={ROUTES.STAFF}>Staff</Link>
                   </li>
-                  </ul>
+                </ul>
               </div>
             </li>
-            
+
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.USERS}>
                 <i class="uil-user"></i>
                 <span> Users </span>
               </Link>
-              </li>
+            </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.TENDER}>
                 <i class="uil-comments-alt"></i>
@@ -155,7 +155,7 @@ export const LeftSidebar = () => {
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.STAFF_DIRECTORY}>
                 <i class="uil-package"></i>
-                <span> Staff Directory</span>
+                <span>  Personnel-Staff Directory</span>
               </Link>
             </li>
             <li class="side-nav-item">
@@ -180,7 +180,7 @@ export const LeftSidebar = () => {
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.COMMUNITY_SERVICE}>
                 <i class="uil-folder-plus"></i>
-                <span> Community Services</span>
+                <span> Community Service</span>
               </Link>
             </li>
             <li class="side-nav-item">
@@ -239,9 +239,9 @@ export const LeftSidebar = () => {
               </div>
             </li>
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.HEALTH_SERVICE}>
                 <i class="uil-layer-group"></i>
-                <span> Health Service</span>
+                <span> Health Services</span>
               </Link>
             </li>
             <li class="side-nav-item">
@@ -257,9 +257,9 @@ export const LeftSidebar = () => {
               </Link>
             </li> */}
             <li class="side-nav-item">
-              <Link class="side-nav-link">
+              <Link class="side-nav-link" to={ROUTES.FEEDBACK}>
                 <i class="uil-document-layout-center"></i>
-                <span> Feedbacks/Input</span>
+                <span> FeedBack/Input</span>
               </Link>
             </li>
             {/* <li className="side-nav-item">

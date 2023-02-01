@@ -69,8 +69,8 @@ export const City_event = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

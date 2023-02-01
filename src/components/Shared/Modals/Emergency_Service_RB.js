@@ -18,7 +18,7 @@ export const Emergency_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Emergency Services
+                Add Emergency Service
               </h4>
               <button
                 type="button"
@@ -31,7 +31,7 @@ export const Emergency_RB = () => {
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="example-multiselect" className="form-label">
-                    Emergency Services
+                    Emergency Service
                   </label>
                   <select
                     id="example-multiselect"
@@ -46,14 +46,14 @@ export const Emergency_RB = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Contact Person
+                    Contact Person (Optional)
                   </label>
                   <input
                     className="form-control"
                     type="text"
                     id="tenderName"
                     required
-                    placeholder="Contact Person (Optional)"
+                    placeholder="Contact Person"
                   />
                 </div>
                 <div className="mb-3">

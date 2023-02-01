@@ -6,9 +6,9 @@ export const Where_to_stay = () => {
     <>
       <div>
         <CustomHeader
-          title={"Where to stay"}
+          title={"Where to Stay"}
           title1={"City"}
-          title2={"Where to stay"}
+          title2={"Where to Stay"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -22,7 +22,7 @@ export const Where_to_stay = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#place_to_stay_modal"
                   >
-                    Add Where to stay
+                    Add Where to Stay
                   </button>
                 </div>
               </div>
@@ -72,8 +72,8 @@ export const Where_to_stay = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

@@ -7,9 +7,9 @@ export const Where_to_eat = () => {
     <>
       <div>
         <CustomHeader
-          title={"Where to eat"}
+          title={"Where to Eat"}
           title1={"City"}
-          title2={"Where to eat"}
+          title2={"Where to Eat"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -67,8 +67,8 @@ export const Where_to_eat = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

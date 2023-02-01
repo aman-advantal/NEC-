@@ -37,7 +37,7 @@ const Policies_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Policies
+                Add Go/Policies
               </h4>
               <button
                 type="button"
@@ -63,7 +63,7 @@ const Policies_RB = () => {
 
                 <div className="mb-3">
                   <label htmlFor="images" className="form-label">
-                    Add Attachment
+                    Attachment
                     <br />
                     {/* <span>Up to 5 Images</span> */}
                   </label>
@@ -160,7 +160,7 @@ const Policies_RB = () => {
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">
-                      Policy Points
+                      Policy Point
                     </label>
                     <Jodit />
                   </div>

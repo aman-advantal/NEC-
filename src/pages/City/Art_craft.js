@@ -8,8 +8,8 @@ export const Art_craft = () => {
       <div>
         <CustomHeader
           title={"Art and Craft"}
-          title1={"About Art and Craft"}
-          title2={"Add Art and Craft"}
+          title1={"City"}
+          title2={" Art and Craft"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -39,7 +39,7 @@ export const Art_craft = () => {
                     id="basic-datatable_wrapper"
                     className="dataTables_wrapper dt-bootstrap5 no-footer"
                   >
-                    <div className="row">
+                    {/* <div className="row">
                       <div className="col-sm-12 col-md-6">
                         <div
                           className="dataTables_length"
@@ -77,7 +77,7 @@ export const Art_craft = () => {
                           </label>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <table
                       id="basic-datatable"
@@ -91,6 +91,7 @@ export const Art_craft = () => {
                           <th>Contact</th>
                           <th>Location</th>
                           <th>Description</th>
+                          <th>Status</th>
                           <th>Acion</th>
                         </tr>
                       </thead>
@@ -103,6 +104,25 @@ export const Art_craft = () => {
                           <td>087707 67573</td>
                           <td>Veena nagar</td>
                           <td>We are a India's wel..</td>
+                          <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="Active"
+                              data-off-label="In-active"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
+
 
                           <td>
                             <a href="#" className="action-icon">

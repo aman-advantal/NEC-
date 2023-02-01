@@ -6,9 +6,9 @@ export const Users_details = () => {
     <>
       <div>
         <CustomHeader
-          title={"User Details"}
-          title1={"Users"}
-          title2={"User Details"}
+          title={"Users"}
+          title1={"Nec"}
+          title2={"Users"}
         />
 
         <div className="row ">

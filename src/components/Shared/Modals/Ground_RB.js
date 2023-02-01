@@ -45,7 +45,7 @@ export const Ground_RB = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="example-multiselect" className="form-label">
-                    Sports Available
+                    Sport Available
                   </label>
                   <select
                     id="example-multiselect"
@@ -64,23 +64,6 @@ export const Ground_RB = () => {
                   </select>
                 </div>
 
-                {/* <select
-                    className="select2 form-control select2-multiple"
-                    data-toggle="select2"
-                    multiple="true"
-                    data-placeholder="Choose ..."
-                  >
-                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                      <option value="AK">Alaska</option>
-                      <option value="HI">Hawaii</option>
-                    </optgroup>
-                    <optgroup label="Pacific Time Zone">
-                      <option value="CA">California</option>
-                      <option value="NV">Nevada</option>
-                      <option value="OR">Oregon</option>
-                      <option value="WA">Washington</option>
-                    </optgroup>
-                  </select> */}
 
                 <div className="mb-3">
                   <label htmlFor="example-textarea" className="form-label">
@@ -92,7 +75,7 @@ export const Ground_RB = () => {
                     rows={3}
                     // style={{ height: 55 }}
                     defaultValue={""}
-                    placeholder="Office Address"
+                    placeholder=" Address"
                   />
                 </div>
                 <div className="mb-3">

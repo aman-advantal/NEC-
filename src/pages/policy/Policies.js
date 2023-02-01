@@ -7,9 +7,9 @@ export const Policies = () => {
     <>
       <div>
         <CustomHeader
-          title={"Important GOs & Policies"}
-          title1={"GOs/Policies"}
-          title2={"Important Policies"}
+          title={"GO/Policies"}
+          title1={"Nec"}
+          title2={"GO/Policies"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -23,7 +23,7 @@ export const Policies = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#policies_of_city_modal"
                   >
-                    Add Policies
+                    Add Go/Policies
                   </button>
                 </div>
               </div>
@@ -44,7 +44,7 @@ export const Policies = () => {
                         <th>S.No</th>
                         <th>Policy Name</th>
                         {/* <th>Date</th> */}
-                        <th>Policy Points</th>
+                        <th>Policy Point</th>
                         <th>Attachment</th>
                         <th>Status</th>
                         <th>Acion</th>
@@ -61,8 +61,8 @@ export const Policies = () => {
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-pdf-box "
-                              style={{ fontSize: "20px" }}
+                              className=" mdi mdi-file-pdf-box text-primary "
+                              style={{ fontSize: "25px" }}
                             />
                           </a>
                         </td>
@@ -77,8 +77,8 @@ export const Policies = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
@@ -107,8 +107,8 @@ export const Policies = () => {
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-excel"
-                              style={{ fontSize: "20px" }}
+                              className=" mdi mdi-file-excel text-success"
+                              style={{ fontSize: "25px" }}
                             />
                           </a>
                         </td>
@@ -123,8 +123,8 @@ export const Policies = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

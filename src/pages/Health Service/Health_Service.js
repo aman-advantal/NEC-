@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Festival_of_city_RB from "../../components/Shared/Modals/Festival_of_city_RB";
-import React from "react";
+import { Hospital_RB } from "../../components/Shared/Modals/Hospital_RB";
+import { ROUTES } from "../../route/constant";
 
-export const Festival_of_city = () => {
+export const Health_Service = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"Festival of City"}
-          title1={"City"}
-          title2={"Festivals"}
+          title={"Health Services"}
+          title1={"Health Services"}
+          title2={"Hospitals"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -21,9 +22,9 @@ export const Festival_of_city = () => {
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#festival_of_city_modal"
+                    data-bs-target="#Hospital_modal"
                   >
-                    Add Festival Of City
+                    Add Hospital
                   </button>
                 </div>
               </div>
@@ -42,21 +43,36 @@ export const Festival_of_city = () => {
                     <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Festival Title</th>
-                        <th>Festival Date</th>
-                        <th>Festival Description</th>
+                        <th>Hospital Name</th>
+                        <th>Type</th>
+                        <th>Contact Number</th>
+                        <th>Description</th>
+
                         <th>Status</th>
-                        <th>Acion</th>
+
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Rang Panchami</td>
-                        <td>12 March</td>
-                        <td>Festival Description</td>
+                        <td>Apollo</td>
+                        <td>Private</td>
+                        <td>8898789867 </td>
+                        <td>Best Private Hospital </td>
+                        {/* <td>
+                          {" "}
+                          <a href="#" className="action-icon">
+                            <i
+                              className=" mdi mdi-file-pdf-box "
+                              style={{ fontSize: "20px" }}
+                            />
+                          </a>
+                        </td> */}
+
                         <td>
+                          {" "}
                           <div>
                             <input
                               type="checkbox"
@@ -73,6 +89,7 @@ export const Festival_of_city = () => {
                             />
                           </div>
                         </td>
+
                         <td>
                           <a href="#" className="action-icon">
                             <i className="mdi mdi-pencil" />
@@ -83,42 +100,9 @@ export const Festival_of_city = () => {
                           <a href="#" className="action-icon">
                             <i className="uil uil-eye" />
                           </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                    <tbody>
-                      <tr>
-                        <td>2</td>
-                        <td>Holi</td>
-                        <td>10 April</td>
-                        <td>Festival Description</td>
-                        <td>
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
+                          <Link href="#" className="action-icon" to={ROUTES.AMBULANCE_LIST}>
+                            <i className=" mdi mdi-ambulance" />
+                          </Link>
                         </td>
                       </tr>
                     </tbody>
@@ -131,7 +115,8 @@ export const Festival_of_city = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        <Festival_of_city_RB />
+        {/* <Tender_RB />    */}
+        <Hospital_RB />
       </div>
     </>
   );

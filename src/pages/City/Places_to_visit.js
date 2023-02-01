@@ -7,9 +7,9 @@ export const Places_to_visit = () => {
     <>
       <div>
         <CustomHeader
-          title={"Places to visit"}
+          title={"Place to visit"}
           title1={"City"}
-          title2={"Places to visit"}
+          title2={"Place to visit"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -23,7 +23,7 @@ export const Places_to_visit = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#place_to_visit_modal"
                   >
-                    Add Places to visit
+                    Add Place to Visit
                   </button>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export const Places_to_visit = () => {
                         id="selection-datatable_wrapper"
                         className="dataTables_wrapper dt-bootstrap5 no-footer"
                       >
-                        <div className="row">
+                        {/* <div className="row">
                           <div className="col-sm-12 col-md-6">
                             <div
                               className="dataTables_length"
@@ -84,7 +84,7 @@ export const Places_to_visit = () => {
                               </label>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="row">
                           <div className="col-sm-12">
                             <table
@@ -122,8 +122,8 @@ export const Places_to_visit = () => {
                                       />
                                       <label
                                         htmlFor="switch01"
-                                        data-on-label="active"
-                                        data-off-label="Inactive"
+                                        data-on-label="Active"
+                                        data-off-label="In-active"
                                         className="mb-0 d-block"
                                         style={{ width: "70px" }}
                                       />
@@ -147,7 +147,7 @@ export const Places_to_visit = () => {
                           </div>
                         </div>
 
-                        <div className="row">
+                        {/* <div className="row">
                           <div className="col-sm-12 col-md-5">
                             <div
                               className="dataTables_info"
@@ -261,7 +261,7 @@ export const Places_to_visit = () => {
                               </ul>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

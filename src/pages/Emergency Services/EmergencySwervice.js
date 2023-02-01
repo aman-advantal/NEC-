@@ -7,8 +7,8 @@ export const EmergencyService = () => {
       <div>
         <CustomHeader
           title={"Emergency Services"}
-          title1={"Emergency Service"}
-          title2={"Service"}
+          title1={"Nec"}
+          title2={"Emergency Services"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -22,7 +22,7 @@ export const EmergencyService = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#Emergency_Service_modal"
                   >
-                    Add Services
+                    Add Emergency Service
                   </button>
                 </div>
               </div>
@@ -70,8 +70,8 @@ export const EmergencyService = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
@@ -108,8 +108,8 @@ export const EmergencyService = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
@@ -146,8 +146,8 @@ export const EmergencyService = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
@@ -184,8 +184,8 @@ export const EmergencyService = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

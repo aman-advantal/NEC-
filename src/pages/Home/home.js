@@ -28,11 +28,11 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
-              
+
               <div className="col-sm-4">
                 <div className="card widget-flat">
                   <div className="card-body">
@@ -53,9 +53,9 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
 
               <div className="col-sm-4">
@@ -78,13 +78,13 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
-              
+
             </div>
-           
+
             <div className="row">
               <div className="col-sm-4">
                 <div className="card widget-flat">
@@ -106,11 +106,11 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
-              
+
               <div className="col-sm-4">
                 <div className="card widget-flat">
                   <div className="card-body">
@@ -128,9 +128,9 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
 
               <div className="col-sm-4">
@@ -150,15 +150,15 @@ export const Home = () => {
                       <span className="text-nowrap">Since last month</span>
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
-              
+
             </div>
-           
+
           </div>
-       
+
           {/* <div className="col-xl-7 col-lg-6">
             <div className="card card-h-100">
               <div className="d-flex card-header justify-content-between align-items-center">
@@ -173,19 +173,19 @@ export const Home = () => {
                     <i className="mdi mdi-dots-vertical" />
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Sales Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Export Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Profit
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Action
                     </a>
@@ -201,13 +201,13 @@ export const Home = () => {
                   />
                 </div>
               </div>
-             
+
             </div>
-       
+
           </div> */}
-    
+
         </div>
-       
+
         {/* <div className="row">
           <div className="col-lg-8">
             <div className="card">
@@ -223,19 +223,19 @@ export const Home = () => {
                     <i className="mdi mdi-dots-vertical" />
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Sales Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Export Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Profit
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Action
                     </a>
@@ -284,9 +284,9 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            
+
           </div>
-          
+
           <div className="col-lg-4">
             <div className="card">
               <div className="d-flex card-header justify-content-between align-items-center">
@@ -301,19 +301,19 @@ export const Home = () => {
                     <i className="mdi mdi-dots-vertical" />
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Sales Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Export Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Profit
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Action
                     </a>
@@ -381,13 +381,13 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-              
+
             </div>
-            
+
           </div>
-          
+
         </div> */}
-       
+
         {/* <div className="row">
           <div className="col-xl-6 col-lg-12 order-lg-2 order-xl-1">
             <div className="card">
@@ -514,13 +514,13 @@ export const Home = () => {
                     </tbody>
                   </table>
                 </div>
-                
+
               </div>
-              
+
             </div>
-            
+
           </div>
-          
+
           <div className="col-xl-3 col-lg-6 order-lg-1">
             <div className="card">
               <div className="d-flex card-header justify-content-between align-items-center">
@@ -535,19 +535,19 @@ export const Home = () => {
                     <i className="mdi mdi-dots-vertical" />
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Sales Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Export Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Profit
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Action
                     </a>
@@ -579,11 +579,11 @@ export const Home = () => {
                   </p>
                 </div>
               </div>
-              
+
             </div>
-            
+
           </div>
-          
+
           <div className="col-xl-3 col-lg-6 order-lg-1">
             <div className="card">
               <div className="d-flex card-header justify-content-between align-items-center">
@@ -598,19 +598,19 @@ export const Home = () => {
                     <i className="mdi mdi-dots-vertical" />
                   </a>
                   <div className="dropdown-menu dropdown-menu-end">
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Sales Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Export Report
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Profit
                     </a>
-                    
+
                     <a href="javascript:void(0);" className="dropdown-item">
                       Action
                     </a>
@@ -748,16 +748,17 @@ export const Home = () => {
                     </div>
                   </div>
                 </div>
-          
+
               </div>
-              
+
             </div>
-            
+
           </div>
-       
+
         </div> */}
-       
+
       </div>
     </>
+  
   );
 };

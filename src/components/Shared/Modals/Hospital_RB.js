@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Jodit from "../Include/jodit";
-
-export const Rec_RB = () => {
-  const [date, setDate] = useState();
-
+import Multi_image from "../Include/Multi_image";
+export const Hospital_RB = () => {
   return (
     <>
       <div
-        id="rec_of_city_modal"
+        id="Hospital_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -23,7 +21,7 @@ export const Rec_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Recruitment
+                Add Hospital
               </h4>
               <button
                 type="button"
@@ -36,43 +34,40 @@ export const Rec_RB = () => {
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Title
+                    Name
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="tenderName"
                     required
-                    placeholder="Job Title"
+                    placeholder=" Hospital  Name"
                   />
                 </div>
-
+                <div className="mb-3">
+                  <label htmlFor="example-select" className="form-label">
+                    Type
+                  </label>
+                  <select className="form-select" id="example-select">
+                    <option>Select</option>
+                    <option>Private</option>
+                    <option>Government</option>
+                  </select>
+                </div>
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Department
+                    Contact Number
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="tenderName"
                     required
-                    placeholder="Department"
+                    placeholder="Contact Number"
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Email
-                  </label>
-                  <input
-                    className="form-control"
-                    type="email"
-                    id="gostitle"
-                    required
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className=" mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
                     Address
                   </label>
                   <textarea
@@ -81,38 +76,14 @@ export const Rec_RB = () => {
                     rows={5}
                     style={{ height: 55 }}
                     defaultValue={""}
+                    placeholder="Address"
                   />
                 </div>
-               
-
-                {/* date */}
-                {/* <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Publish Date
-                  </label>
-                  <input
-                    className="form-control"
-                    type="date"
-                    id="date"
-                    required
-                    onChange={(e) => setDate(e.target.value)}
-                  />
-                </div> */}
-
-                {/* date */}
-                <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Last Date
-                  </label>
-                  <input
-                    className="form-control"
-                    type="date"
-                    id="date"
-                    required
-                    onChange={(e) => setDate(e.target.value)}
-                  />
+                <div className="row">
+                  <div className="col-12 mb-3">
+                    <Multi_image title="Attachment" />
+                  </div>
                 </div>
-
                 <div className="row">
                   <div className="col-12 mb-3">
                     <label htmlFor="example-textarea" className="form-label">

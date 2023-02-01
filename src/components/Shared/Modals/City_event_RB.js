@@ -65,7 +65,7 @@ export const City_event_RB = () => {
                 <div className="col-4">
                   <div className="mb-3">
                   <label htmlFor="example-select" className="form-label">
-                        Event place
+                        Event Place
                       </label>
                       <select className="form-select" id="example-select">
                         <option>Select</option>

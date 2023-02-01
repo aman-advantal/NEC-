@@ -7,9 +7,9 @@ export const StaffDirectory = () => {
     <>
       <div>
         <CustomHeader
-          title={"Staff Directory"}
-          title1={"Staff Directories"}
-          title2={"Staff Directory"}
+          title={"Key Personnel-Staff Directory"}
+          title1={"Nec"}
+          title2={"Key Personnel-Staff Directory"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -23,7 +23,7 @@ export const StaffDirectory = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#Staff_modal"
                   >
-                    Add Staff Directory
+                    Add Key Personnel-Staff Directory
                   </button>
                 </div>
               </div>
@@ -73,8 +73,8 @@ export const StaffDirectory = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

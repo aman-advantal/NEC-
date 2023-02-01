@@ -9,7 +9,7 @@ export const GroundDetail = () => {
       <div>
         <CustomHeader
           title={"Sport Facility"}
-          title1={"Sport Facility"}
+          title1={"Nec"}
           title2={"Ground Details"}
         />
         <div className="row ">
@@ -69,8 +69,8 @@ export const GroundDetail = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

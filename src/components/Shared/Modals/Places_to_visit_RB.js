@@ -22,7 +22,7 @@ export const Places_to_visit_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Places to visit
+                Add Place to Visit
               </h4>
               <button
                 type="button"
@@ -67,7 +67,7 @@ export const Places_to_visit_RB = () => {
                 <div className="col-4">
                   <div className="mb-3">
                     <label htmlFor="example-multiselect" className="form-label">
-                      Visiting time
+                      Visiting Time
                     </label>
                     <input
                       className="form-control"

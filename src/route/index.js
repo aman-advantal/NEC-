@@ -30,6 +30,9 @@ import { Staff } from "../pages/Staff_management/Staff";
 import { Role } from "../pages/Staff_management/Role";
 import { Users_details } from "../pages/Users/Users_details";
 import { EmergencyService } from "../pages/Emergency Services/EmergencySwervice";
+import { Health_Service } from "../pages/Health Service/Health_Service";
+import { Ambulance_List } from "../pages/Health Service/AmbulaneList/AmbulanceList";
+import { Feedback } from "../pages/Feedbacks/Feedback";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -167,12 +170,27 @@ export const AppRouter = () => {
       key: 27,
       path: ROUTES.USERS,
       component: Users_details,
-    },    
+    },
     {
       key: 28,
       path: ROUTES.EMERGENCY_SERVICE,
       component: EmergencyService,
-    },                                                                                                                                                                                                         
+    },
+    {
+      key: 29,
+      path: ROUTES.HEALTH_SERVICE,
+      component: Health_Service,
+    },
+    {
+      key: 30,
+      path: ROUTES.AMBULANCE_LIST,
+      component: Ambulance_List,
+    },
+    {
+      key: 31,
+      path: ROUTES.FEEDBACK,
+      component: Feedback,
+    },
     // END City Routing
   ];
   const loc = useLocation();

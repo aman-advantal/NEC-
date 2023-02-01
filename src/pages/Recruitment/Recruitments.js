@@ -8,8 +8,8 @@ export const Recruitments = () => {
       <div>
         <CustomHeader
           title={"Recruitments"}
-          title1={"Recruitments"}
-          title2={"Recruitment"}
+          title1={"Nec"}
+          title2={"Recruitments"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -23,7 +23,7 @@ export const Recruitments = () => {
                     data-bs-toggle="modal"
                     data-bs-target="#rec_of_city_modal"
                   >
-                    Add Recruitments
+                    Add Recruitment
                   </button>
                 </div>
               </div>
@@ -58,9 +58,9 @@ export const Recruitments = () => {
                       <tr>
                         <td>1</td>
                         <td>Software developer</td>
-                        <td>Trainee</td>
-                        <td>hcjv </td>
-                        <td>Trainee@gmail.com</td>
+                        <td>CRM</td>
+                        <td>Azad Nagar </td>
+                        <td>hr123@gmail.com</td>
                         <td>18/03/2010</td>
                         <td>18/04/2010</td>
                         {/* <td>Construction of EWS house</td> */}
@@ -75,8 +75,8 @@ export const Recruitments = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
@@ -98,10 +98,10 @@ export const Recruitments = () => {
 
                       <tr>
                         <td>2</td>
-                        <td>Software developer</td>
-                        <td>Trainee</td>
-                        <td>hcjv </td>
-                        <td>Trainee@gmail.com</td>
+                        <td>Automation Tester</td>
+                        <td>Testing</td>
+                        <td>Tulsi Nagar Bhopal </td>
+                        <td>hr123@gmail.com</td>
                         <td>18/03/2010</td>
                         <td>18/04/2010</td>
                         {/* <td>Construction of EWS houses</td> */}
@@ -116,8 +116,8 @@ export const Recruitments = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />

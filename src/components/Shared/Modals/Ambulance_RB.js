@@ -1,13 +1,10 @@
-import React, { useState } from "react";
 import Jodit from "../Include/jodit";
 
-export const Rec_RB = () => {
-  const [date, setDate] = useState();
-
+export const Ambulance_RB = () => {
   return (
     <>
       <div
-        id="rec_of_city_modal"
+        id="Ambulance_modal"
         className="modal fade"
         tabIndex={-1}
         role="dialog"
@@ -23,7 +20,7 @@ export const Rec_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Recruitment
+                Add Ambulance
               </h4>
               <button
                 type="button"
@@ -36,80 +33,26 @@ export const Rec_RB = () => {
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Title
+                    Contact Person (Optional)
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="tenderName"
                     required
-                    placeholder="Job Title"
+                    placeholder="Contact Person"
                   />
                 </div>
-
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label">
-                    Department
+                    Contact Number
                   </label>
                   <input
                     className="form-control"
                     type="text"
-                    id="gostitle"
+                    id="tenderName"
                     required
-                    placeholder="Department"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="title" className="form-label">
-                    Email
-                  </label>
-                  <input
-                    className="form-control"
-                    type="email"
-                    id="gostitle"
-                    required
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className=" mb-3">
-                  <label htmlFor="example-textarea" className="form-label">
-                    Address
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="example-textarea"
-                    rows={5}
-                    style={{ height: 55 }}
-                    defaultValue={""}
-                  />
-                </div>
-               
-
-                {/* date */}
-                {/* <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Publish Date
-                  </label>
-                  <input
-                    className="form-control"
-                    type="date"
-                    id="date"
-                    required
-                    onChange={(e) => setDate(e.target.value)}
-                  />
-                </div> */}
-
-                {/* date */}
-                <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    Last Date
-                  </label>
-                  <input
-                    className="form-control"
-                    type="date"
-                    id="date"
-                    required
-                    onChange={(e) => setDate(e.target.value)}
+                    placeholder="Contact Number"
                   />
                 </div>
 

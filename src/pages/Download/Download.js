@@ -6,9 +6,9 @@ export const Downloads = () => {
     <>
       {" "}
       <CustomHeader
-        title={"Download"}
-        title1={"Downloads"}
-        title2={"Download"}
+        title={"Downloads"}
+        title1={"Nec"}
+        title2={"Downloads"}
       />
       <div className="row ">
         <div className="col-lg-12">
@@ -52,20 +52,20 @@ export const Downloads = () => {
                   <tbody>
                     <tr>
                         <td>1</td>
-                      <td>Pan Card</td>
-                      <td>Pancard Detail Of USer</td>
+                      <td>Staff Info</td>
+                      <td>Information of All staff member</td>
                       <td>
                         {" "}
                         <a href="#" className="action-icon">
                           <i
-                            className=" mdi mdi-file-pdf-box "
-                            style={{ fontSize: "20px" }}
+                            className=" mdi mdi-file-pdf-box text-primary"
+                            style={{ fontSize: "25px" }}
                           />
                         </a>
                         <a href="#" className="action-icon">
                           <i
-                            className="  mdi mdi-file-document"
-                            style={{ fontSize: "20px" }}
+                            className="  mdi mdi-file-document text-success"
+                            style={{ fontSize: "25px" }}
                           />
                         </a>
                       </td>
@@ -80,8 +80,8 @@ export const Downloads = () => {
                           />
                           <label
                             htmlFor="switch01"
-                            data-on-label="active"
-                            data-off-label="Inactive"
+                            data-on-label="Active"
+                            data-off-label="In-active"
                             className="mb-0 d-block"
                             style={{ width: "70px" }}
                           />

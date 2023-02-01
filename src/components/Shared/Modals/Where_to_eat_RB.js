@@ -22,7 +22,7 @@ export const Where_to_eat_RB = () => {
               }}
             >
               <h4 className="modal-title" id="fullWidthModalLabel">
-                Add Where to eat
+                Add Where to Eat
               </h4>
               <button
                 type="button"
@@ -97,7 +97,7 @@ export const Where_to_eat_RB = () => {
                 <div className="col-4">
                   <div className="mb-3">
                     <label for="example-textarea" class="form-label">
-                      Resturant type
+                      Resturant Type
                     </label>
                     <div className="mt-2">
                       <div className="form-check form-check-inline">
@@ -148,7 +148,7 @@ export const Where_to_eat_RB = () => {
               <div className="row">
                 <div className="mb-3 col-4">
                   <label htmlFor="password" className="form-label">
-                    Website url
+                    Website Url
                   </label>
                   <input
                     className="form-control"

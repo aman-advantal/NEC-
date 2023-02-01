@@ -6,9 +6,9 @@ export const Tender = () => {
     <>
       <div>
         <CustomHeader
-          title={"Tender of City"}
-          title1={"City"}
-          title2={"Tender of City"}
+          title={"Tenders"}
+          title1={"Nec"}
+          title2={"Tenders"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -63,8 +63,8 @@ export const Tender = () => {
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-pdf-box "
-                              style={{ fontSize: "20px" }}
+                              className=" mdi mdi-file-pdf-box text-primary "
+                              style={{ fontSize: "25px" }}
                             />
                           </a>
                         </td>
@@ -80,8 +80,8 @@ export const Tender = () => {
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
+                              data-on-label="Active"
+                              data-off-label="In-active"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
                             />
