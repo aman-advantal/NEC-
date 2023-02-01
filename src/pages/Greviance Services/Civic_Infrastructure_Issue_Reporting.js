@@ -1,26 +1,24 @@
+import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import { FeedBack_Comment_RB } from "../../components/Shared/Modals/Feedback_RB";
-
-export const Feedback = () => {
+import Civic_Infra_Comment_RB from "../../components/Shared/Modals/Civic_Infra_Comment_RB";
+export const Civic_Infrastructure_Issue_Reporting = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"FeedBack/Input"}
-          title1={"Nec"}
-          title2={"FeedBack/Input"}
+          title={"Civic Infrastructure Issue Reporting"}
+          title1={"NEC"}
+          title2={"Civic Infrastructure Issue Reporting"}
         />
-        {/* <div className="row ">
+        <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
               <div className="row g-0 align-items-center">
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                
-                </div>
+                <div style={{ display: "flex", justifyContent: "end" }}></div>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
@@ -32,29 +30,32 @@ export const Feedback = () => {
                   >
                     <thead>
                       <tr>
-                        <th>FeedBack Type</th>
-                        <th>User Name</th>
+                        <th> Complain No.</th>
+
+                        <th>Type</th>
+                        <th> Name</th>
                         <th>Contact No.</th>
-                        <th>FeedBack</th>
-                        <th>Submitted Date</th>
+                        <th>Enter Details</th>
+
                         <th>Attachment</th>
-                        <th>Status</th>
+                        <td>Status</td>
                         <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>PWD Department</td>
+                        <td>22</td>
+                        <td>civic</td>
                         <td>Ankrita</td>
-                        <td>456789033</td>
-                        <td>sdfghjk</td>
-                        <td>2-4-2023</td>
+                        <td>9989768364</td>
+                        <td>Description</td>
+
                         <td>
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-image text-primary"
+                              className="uil-image text-primary"
                               style={{ fontSize: "25px" }}
                             />
                           </a>
@@ -62,10 +63,11 @@ export const Feedback = () => {
 
                         <td>
                           {" "}
-                          <div className="badge bg-success p-1 rounded-3">
+                          <div className="badge bg-success p-1">
                             <span>Pending</span>
                           </div>
                         </td>
+
                         <td>
                           {" "}
                           <a href="#" className="action-icon">
@@ -88,8 +90,7 @@ export const Feedback = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        {/* <FeedBack_Comment_RB/> */}
-        <FeedBack_Comment_RB />
+        <Civic_Infra_Comment_RB />
       </div>
     </>
   );

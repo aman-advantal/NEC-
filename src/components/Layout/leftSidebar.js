@@ -155,7 +155,7 @@ export const LeftSidebar = () => {
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.STAFF_DIRECTORY}>
                 <i class="uil-package"></i>
-                <span>  Personnel-Staff Directory</span>
+                <span> Personnel-Staff Directory</span>
               </Link>
             </li>
             <li class="side-nav-item">
@@ -362,16 +362,25 @@ export const LeftSidebar = () => {
               <div className="collapse" id="sidebarGrievance">
                 <ul className="side-nav-second-level">
                   <li>
-                    <Link>Civic Infrastructure Issue Reporting</Link>
+                    <Link to={ROUTES.CIVIC_INFRASTACTURE}>
+                      Civic Infrastructure Issue Reporting
+                    </Link>
                   </li>
                   <li>
-                    <Link>Enforcement reporting </Link>
+                    <Link to={ROUTES.ENFORCEMENT_REPORTING}>
+                      Enforcement reporting{" "}
+                    </Link>
                   </li>
                   <li>
-                    <Link> Sanitation Issue Reporting</Link>
+                    <Link to={ROUTES.SANITATION_ISSUE}>
+                      {" "}
+                      Sanitation Issue Reporting
+                    </Link>
                   </li>
                   <li>
-                    <Link>Public Convienance Services Reporting </Link>
+                    <Link to={ROUTES.PUNLIC_CONVIEMNCE}>
+                      Public Convienance Services Reporting{" "}
+                    </Link>
                   </li>
                 </ul>
               </div>

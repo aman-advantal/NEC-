@@ -1,17 +1,18 @@
+import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import { FeedBack_Comment_RB } from "../../components/Shared/Modals/Feedback_RB";
-
-export const Feedback = () => {
+import Saniatation_Comment_RB from "../../components/Shared/Modals/Saniatation_Comment_RB";
+export const Saniatation_Issue = () => {
   return (
     <>
       <div>
         <CustomHeader
-          title={"FeedBack/Input"}
-          title1={"Nec"}
-          title2={"FeedBack/Input"}
+          title={"Saniatation Issue"}
+          title1={"NEC"}
+          title2={"Saniatation Issue"}
         />
-        {/* <div className="row ">
+        <div className="row ">
           <div className="col-lg-12">
+         
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div style={{ display: "flex", justifyContent: "end" }}>
@@ -20,11 +21,15 @@ export const Feedback = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="row ">
+          
           <div className="col-lg-12">
+
             <div className="card p-2">
+              
               <div className="row g-0 align-items-center">
+                
                 <div>
                   <table
                     id="basic-datatable"
@@ -32,40 +37,44 @@ export const Feedback = () => {
                   >
                     <thead>
                       <tr>
-                        <th>FeedBack Type</th>
-                        <th>User Name</th>
+                        <th>Type</th>
+                        <th> Name</th>
                         <th>Contact No.</th>
-                        <th>FeedBack</th>
-                        <th>Submitted Date</th>
-                        <th>Attachment</th>
-                        <th>Status</th>
+                        <th>Enter Details</th>
+                     <th>Attachment</th>
+                        <td>Status</td>
                         <th>Action</th>
+                      
+                        
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>PWD Department</td>
+                        <td>Overflowing of Garabage Bins  </td>
                         <td>Ankrita</td>
-                        <td>456789033</td>
-                        <td>sdfghjk</td>
-                        <td>2-4-2023</td>
+                        <td>9989768364</td>
+                        <td>Description</td>
+                      
                         <td>
                           {" "}
                           <a href="#" className="action-icon">
                             <i
-                              className=" mdi mdi-file-image text-primary"
+                              className="uil-image text-primary"
                               style={{ fontSize: "25px" }}
+                           
                             />
                           </a>
                         </td>
 
                         <td>
                           {" "}
-                          <div className="badge bg-success p-1 rounded-3">
-                            <span>Pending</span>
+                          <div className="badge bg-success p-1">
+                            <span >Pending</span>
                           </div>
+                        
                         </td>
+
                         <td>
                           {" "}
                           <a href="#" className="action-icon">
@@ -77,6 +86,8 @@ export const Feedback = () => {
                             />
                           </a>
                         </td>
+                        
+                        
                       </tr>
                     </tbody>
                   </table>
@@ -88,8 +99,8 @@ export const Feedback = () => {
           </div>{" "}
           {/* end col*/}
         </div>
-        {/* <FeedBack_Comment_RB/> */}
-        <FeedBack_Comment_RB />
+      
+        <Saniatation_Comment_RB/>
       </div>
     </>
   );

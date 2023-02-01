@@ -33,6 +33,10 @@ import { EmergencyService } from "../pages/Emergency Services/EmergencySwervice"
 import { Health_Service } from "../pages/Health Service/Health_Service";
 import { Ambulance_List } from "../pages/Health Service/AmbulaneList/AmbulanceList";
 import { Feedback } from "../pages/Feedbacks/Feedback";
+import { Saniatation_Issue } from "../pages/Saniatation Issue/Saniatation_Issue";
+import { Enforcement_Reporting } from "../pages/Enforcement Reporting/Enforcement_Reporting";
+import { Public_Convenience } from "../pages/Public Convenience/Public_Convenience";
+import { Civic_Infrastructure_Issue_Reporting } from "../pages/Greviance Services/Civic_Infrastructure_Issue_Reporting";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -190,6 +194,26 @@ export const AppRouter = () => {
       key: 31,
       path: ROUTES.FEEDBACK,
       component: Feedback,
+    },
+    {
+      key: 32,
+      path: ROUTES.SANITATION_ISSUE,
+      component: Saniatation_Issue,
+    },
+    {
+      key: 33,
+      path: ROUTES.ENFORCEMENT_REPORTING,
+      component: Enforcement_Reporting,
+    },
+    {
+      key: 34,
+      path: ROUTES.PUNLIC_CONVIEMNCE,
+      component: Public_Convenience,
+    },
+    {
+      key: 34,
+      path: ROUTES.CIVIC_INFRASTACTURE,
+      component:Civic_Infrastructure_Issue_Reporting,
     },
     // END City Routing
   ];

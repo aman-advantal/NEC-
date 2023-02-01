@@ -1,6 +1,6 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import React from "react";
 import Tender_RB from "../../components/Shared/Modals/Tender_RB";
+import React from "react"
 export const Tender = () => {
   return (
     <>
@@ -45,8 +45,7 @@ export const Tender = () => {
                         <th>Category</th>
                         <th>Description</th>
                         <th>Attachment</th>
-                        {/* <th>Date</th> */}
-                        {/* <th>Last Submission Date</th> */}
+                       
                         <th>Status</th>
 
                         <th>Action</th>
@@ -102,6 +101,7 @@ export const Tender = () => {
                       </tr>
                     </tbody>
                   </table>
+               
                 </div>{" "}
                 {/* end row*/}
               </div>{" "}

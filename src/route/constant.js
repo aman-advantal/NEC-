@@ -47,4 +47,9 @@ export const ROUTES = {
   AMBULANCE_LIST: process.env.PUBLIC_URL + "/ambulance-list",
   // 
   FEEDBACK: process.env.PUBLIC_URL + "/feedback",
+  CIVIC_INFRASTACTURE:process.env.PUBLIC_URL + "/civic-infrastructure",
+  ENFORCEMENT_REPORTING:process.env.PUBLIC_URL + "/enforcement-reporting",
+  SANITATION_ISSUE:process.env.PUBLIC_URL + "/Sanitation-issue",
+  PUNLIC_CONVIEMNCE:process.env.PUBLIC_URL + "/public-convience",
 };
+
