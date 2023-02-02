@@ -78,3 +78,6 @@ input[data-switch]:checked+label:after {
   width: 1000px!important;
   height: 500px !important;
 }
+.icon-color{
+  color:var(--primaryDark)!important;
+}

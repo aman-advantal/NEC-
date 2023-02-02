@@ -1,13 +1,14 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader"
+import Muncipal_RB from "../../components/Shared/Modals/Muncipal_RB"
 
-export const Ward=()=>{
+export const Muncipal=()=>{
     return(
         <>
         <div>
         <CustomHeader
-          title={"Ward Information"}
-          title1={"Wards Info"}
-          title2={"Ward Info"}
+          title={"Municipal Officer"}
+          title1={"NEC"}
+          title2={"Municipal Officer"}
         />
         <div className="row ">
           <div className="col-lg-12">
@@ -19,9 +20,9 @@ export const Ward=()=>{
                     class="btn btn-primary "
                     style={{ border: "none" }}
                     data-bs-toggle="modal"
-                    data-bs-target="#Ward_modal"
+                    data-bs-target="#muncipal_modal"
                   >
-                    Add Ward Info
+                    Add Municipal Officer
                   </button>
                 </div>
               </div>
@@ -39,26 +40,21 @@ export const Ward=()=>{
                   >
                     <thead>
                       <tr>
-                        <th> Name</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th> Designation</th>
-                        <th>Department</th>
-                        <th>Office Address</th>
-                        <td>Status</td>
+                      <th>Grade</th>
+                        <th>Name</th>
+                        <th>Contact No.</th>
+                        <th>Ward No.</th>
+                        <th>Status</th>
                         <th>Action</th>
-                        
                       </tr>
                     </thead>
 
                     <tbody>
                       <tr>
-                        <td>Rohit Jain</td>
-                        <td>rohit@123.com</td>
-                        <td>9989768364</td>
-                        <td>Officer</td>
-                        <td>Muncipal</td>
-                        <td>Vijay nagar scheme 54</td>
+                      <td>Officer</td>
+                        <td>Pratap Singh</td>
+                        <td>776543456</td>
+                        <td>Ward 76</td>
                         <td>
                           {" "}
                           <div>
@@ -70,7 +66,47 @@ export const Ward=()=>{
                             />
                             <label
                               htmlFor="switch01"
-                              data-on-label="active"
+                              data-on-label="Active"
+                              data-off-label="Inactive"
+                              className="mb-0 d-block"
+                              style={{ width: "70px" }}
+                            />
+                          </div>
+                        </td>
+
+                        <td className="table-action">
+                          <a href="#" className="action-icon">
+                            {" "}
+                            <i className="mdi mdi-pencil" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            {" "}
+                            <i className="mdi mdi-delete" />
+                          </a>
+                          <a href="#" className="action-icon">
+                            <i className="uil uil-eye" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody>
+                      <tr>
+                      <td>Commissioner</td>
+                        <td>Ms. Pratibha Pal</td>
+                        <td>776543456</td>
+                        <td>Ward 78</td>
+                        <td>
+                          {" "}
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="switch01"
+                              defaultChecked="true"
+                              data-switch="success"
+                            />
+                            <label
+                              htmlFor="switch01"
+                              data-on-label="Active"
                               data-off-label="Inactive"
                               className="mb-0 d-block"
                               style={{ width: "70px" }}
@@ -102,7 +138,7 @@ export const Ward=()=>{
           </div>{" "}
           {/* end col*/}
         </div>
-        {/* <StaffDirectory_RB /> */}
+        <Muncipal_RB />
       </div>
 
         </>

@@ -51,5 +51,11 @@ export const ROUTES = {
   ENFORCEMENT_REPORTING:process.env.PUBLIC_URL + "/enforcement-reporting",
   SANITATION_ISSUE:process.env.PUBLIC_URL + "/Sanitation-issue",
   PUNLIC_CONVIEMNCE:process.env.PUBLIC_URL + "/public-convience",
+  MUNICIPAL_INFO:process.env.PUBLIC_URL + "/ward/municipal-info",
+  WATER_SUPPLY:process.env.PUBLIC_URL + "/Ward/water-supply",
+  GARBAGE_COLLECTION:process.env.PUBLIC_URL + "/ward/garbage-collection",
+  OTHERS:process.env.PUBLIC_URL + "/ward//others",
+
+  
 };
 

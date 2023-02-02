@@ -1,8 +1,95 @@
+import { Table } from "antd";
 import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 
 import { StaffDirectory_RB } from "../../components/Shared/Modals/Staff_Directory_RB";
 export const StaffDirectory = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+    },
+    {
+      title: "Contact",
+      dataIndex: "contact",
+    },
+    {
+      title: "Designation",
+      dataIndex: "designation",
+    },
+    {
+      title: "Department",
+      dataIndex: "department",
+    },
+    {
+      title: "Office Address",
+      dataIndex: "office_address",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      name: "Rohit Jain",
+      email: "rohit123@gmail.com",
+      contact: "9890890987",
+      designation: "Officer",
+      department: "Municipal",
+      office_address: "vijay nagar",
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -35,75 +122,15 @@ export const StaffDirectory = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th> Name</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th> Designation</th>
-                        <th>Department</th>
-                        <th>Office Address</th>
-                        <td>Status</td>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Rohit Jain</td>
-                        <td>rohit@123.com</td>
-                        <td>9989768364</td>
-                        <td>Officer</td>
-                        <td>Muncipal</td>
-                        <td>Vijay nagar scheme 54</td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-
-                        <td className="table-action">
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>{" "}
-                {/* end row*/}
               </div>{" "}
             </div>
-            {/* end card*/}
           </div>{" "}
-          {/* end col*/}
         </div>
         <StaffDirectory_RB />
       </div>

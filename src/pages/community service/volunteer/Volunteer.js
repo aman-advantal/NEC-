@@ -1,7 +1,100 @@
+import { Table } from "antd";
 import { Link } from "react-router-dom";
 import { CustomHeader } from "../../../components/Shared/common/CustomHeader";
 
 export const Volunteer = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Contact Number",
+      dataIndex: "contact",
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+    },
+    {
+      title: "Date",
+      dataIndex: "date",
+    },
+    {
+      title: "Attachment",
+      dataIndex: "attachment",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      name: "Aman",
+      contact: "9809898909",
+      date: "12/03/2022",
+      address: "Nehru Nagar",
+      date: "12/02/2022",
+      attachment: (
+        <a href="#" className="action-icon">
+          <i
+            className=" mdi mdi-file-pdf-box text-primary "
+            style={{ fontSize: "25px" }}
+          />
+        </a>
+      ),
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      // action: (
+      //   <div>
+      //     <a href="#" className="action-icon">
+      //       <i className="mdi mdi-pencil font-20 icon-color" />
+      //     </a>
+      //     <a href="#" className="action-icon">
+      //       <i className="mdi mdi-delete font-20 icon-color " />
+      //     </a>
+      //     <a href="#" className="action-icon">
+      //       <i className="uil uil-eye font-20 icon-color" />
+      //     </a>
+      //     <Link
+      //       to={ROUTES.VOLUNTEER_DETAIL}
+      //       className="action-icon "
+      //       style={{ fontSize: "20px", marginLeft: "5px" }}
+      //     >
+      //       <i className=" mdi mdi-account-group icon-color" />
+      //     </Link>
+      //   </div>
+      // ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -15,135 +108,15 @@ export const Volunteer = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Contact Number</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Attachment</th>
-                        <th> Volunteer Status</th>
-                        {/* <th>Description</th> */}
-                        {/* <th>Status</th>
-                        <th>Action</th> */}
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>aman</td>
-                        <td>7999865647</td>
-                        <td>Vijay nagar sch 84</td>
-                        <td>20/01/23</td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-file-pdf-box  text-primary"
-                              style={{ fontSize: "25px" }}
-                            />
-                          </a>
-                        </td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-                     
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Sawan</td>
-                        <td>7999865647</td>
-                        <td>tulsi nagar sch 84</td>
-                        <td>20/01/23</td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-file-pdf-box  text-primary "
-                              style={{ fontSize: "25px"}}
-                            />
-                          </a>
-                        </td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-                        {/* <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="active"
-                              data-off-label="Inactive"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td> */}
-                        {/* <td>Construction of EWS house(PMAY).</td> */}
-                        {/* <td>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                         
-                        </td> */}
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>{" "}
-                {/* end row*/}
               </div>{" "}
             </div>
-            {/* end card*/}
           </div>{" "}
-          {/* end col*/}
         </div>
       </div>
     </>

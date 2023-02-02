@@ -1,7 +1,95 @@
+import { Table } from "antd";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Where_to_stay_RB from "../../components/Shared/Modals/Where_to_stay_RB";
 
 export const Where_to_stay = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Hotel Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Contact Number",
+      dataIndex: "contact",
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+    },
+    {
+      title: "Room Type",
+      dataIndex: "type",
+    },
+    {
+      title: "Area",
+      dataIndex: "area",
+    },
+    {
+      title: "Location",
+      dataIndex: "location",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      name: "Sayaji ",
+      type: "Delux",
+      email: "sayajiind@123.com",
+      contact: "9878985467",
+      area: "Vijay nagar",
+      location: "Bapat square",
+
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -34,72 +122,15 @@ export const Where_to_stay = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th>Hotel Name</th>
-                        <th>Contact No</th>
-                        <th>Email</th>
-                        <th>Room Type</th>
-                        <th>Area</th>
-                        <th>Location</th>
-                        <th>Status</th>
-                        <th>Acion</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Sayaji</td>
-                        <td>9878987867</td>
-                        <td>sayaji@indore.com</td>
-                        <td>Delux</td>
-                        <td>Vijay nagar</td>
-                        <td>Indore</td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>{" "}
-                {/* end row*/}
               </div>{" "}
             </div>
-            {/* end card*/}
           </div>{" "}
-          {/* end col*/}
         </div>
         <Where_to_stay_RB />
       </div>

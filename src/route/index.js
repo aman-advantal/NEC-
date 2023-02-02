@@ -24,7 +24,6 @@ import { Community } from "../pages/community service/community";
 import { Volunteer } from "../pages/community service/volunteer/Volunteer";
 import { GroundDetail } from "../pages/Sport Facility/Sport";
 import { GroundEvent } from "../pages/Sport Facility/Event-Detail/Ground_Event";
-import { Ward } from "../pages/ward/Ward";
 import { Downloads } from "../pages/Download/Download";
 import { Staff } from "../pages/Staff_management/Staff";
 import { Role } from "../pages/Staff_management/Role";
@@ -37,6 +36,10 @@ import { Saniatation_Issue } from "../pages/Saniatation Issue/Saniatation_Issue"
 import { Enforcement_Reporting } from "../pages/Enforcement Reporting/Enforcement_Reporting";
 import { Public_Convenience } from "../pages/Public Convenience/Public_Convenience";
 import { Civic_Infrastructure_Issue_Reporting } from "../pages/Greviance Services/Civic_Infrastructure_Issue_Reporting";
+import { Muncipal } from "../pages/ward/Muncipal";
+import { Water_supply } from "../pages/ward/Water_supply";
+import { Garbage } from "../pages/ward/Garbage";
+import { Others } from "../pages/ward/Others";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -151,11 +154,6 @@ export const AppRouter = () => {
       component: GroundEvent,
     },
     {
-      key: 23,
-      path: ROUTES.WARD_INFO,
-      component: Ward,
-    },
-    {
       key: 24,
       path: ROUTES.DOWNLOAD,
       component: Downloads,
@@ -206,14 +204,34 @@ export const AppRouter = () => {
       component: Enforcement_Reporting,
     },
     {
-      key: 34,
+      key: 35,
       path: ROUTES.PUNLIC_CONVIEMNCE,
       component: Public_Convenience,
     },
     {
-      key: 34,
+      key: 36,
       path: ROUTES.CIVIC_INFRASTACTURE,
       component:Civic_Infrastructure_Issue_Reporting,
+    },
+    {
+      key: 37,
+      path: ROUTES.MUNICIPAL_INFO,
+      component:Muncipal,
+    },
+    {
+      key: 38,
+      path: ROUTES.WATER_SUPPLY,
+      component:Water_supply,
+    },
+    {
+      key: 39,
+      path: ROUTES.GARBAGE_COLLECTION,
+      component:Garbage,
+    },
+    {
+      key: 40,
+      path: ROUTES.OTHERS,
+      component:Others,
     },
     // END City Routing
   ];

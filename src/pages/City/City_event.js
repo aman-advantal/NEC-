@@ -1,8 +1,88 @@
+import { Table } from "antd";
 import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import { City_event_RB } from "../../components/Shared/Modals/City_event_RB";
 
 export const City_event = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Event name",
+      dataIndex: "name",
+      sorter: (a, b) => a.title.length - b.title.length,
+      sortDirections: ["descend"],
+    },
+
+    {
+      title: "Event Date",
+      dataIndex: "date",
+    },
+    {
+      title: "Event Place",
+      dataIndex: "place",
+    },
+    {
+      title: "Category",
+      dataIndex: "category",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      name: "Mega Trade Fare",
+      category: "Social",
+      location: "Vijay Nagar square",
+      place: " Hotel Sayaji scheme 54",
+      date: "10/12/2022",
+
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -35,67 +115,15 @@ export const City_event = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th>Event Name</th>
-                        <th>Event Date</th>
-                        <th>Event Place</th>
-                        <th>Categories</th>
-                        <th>Status</th>
-                        <th>Acion</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Divine Live</td>
-                        <td>12-03-2023</td>
-                        <td>Essentia luxury hotel</td>
-                        <td>Live Concert</td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>
               </div>
             </div>
-            {/* end card*/}
           </div>
-          {/* end col*/}
         </div>
         <City_event_RB />
       </div>

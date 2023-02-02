@@ -1,8 +1,92 @@
+import { Table } from "antd";
 import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Art_craft_RB from "../../components/Shared/Modals/Art_craft_RB";
 
 export const Art_craft = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Title",
+      dataIndex: "title",
+      sorter: (a, b) => a.title.length - b.title.length,
+      sortDirections: ["descend"],
+    },
+
+    {
+      title: "Contact Number",
+      dataIndex: "contact",
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+    },
+    {
+      title: "Location",
+      dataIndex: "location",
+    },
+    {
+      title: "Description",
+      dataIndex: "description",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      title: "jarden Art & Craft",
+      contact: "9878985467",
+      location: "Vijay Nagar square",
+      address: "scheme 54",
+      description: "art & craft description",
+
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -39,114 +123,15 @@ export const Art_craft = () => {
                     id="basic-datatable_wrapper"
                     className="dataTables_wrapper dt-bootstrap5 no-footer"
                   >
-                    {/* <div className="row">
-                      <div className="col-sm-12 col-md-6">
-                        <div
-                          className="dataTables_length"
-                          id="basic-datatable_length"
-                        >
-                          <label>
-                            Show
-                            <select
-                              name="basic-datatable_length"
-                              aria-controls="basic-datatable"
-                              className="form-select form-select-sm"
-                            >
-                              <option value="10">10</option>
-                              <option value="25">25</option>
-                              <option value="50">50</option>
-                              <option value="100">100</option>
-                            </select>
-                            entries
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6">
-                        <div
-                          id="basic-datatable_filter"
-                          className="dataTables_filter"
-                        >
-                          <label>
-                            Search:
-                            <input
-                              type="search"
-                              className="form-control form-control-sm"
-                              placeholder=""
-                              aria-controls="basic-datatable"
-                            ></input>
-                          </label>
-                        </div>
-                      </div>
-                    </div> */}
-
-                    <table
-                      id="basic-datatable"
-                      className="table dt-responsive nowrap w-100 "
-                    >
-                      <thead>
-                        <tr>
-                          <th>S.No</th>
-                          <th>Title</th>
-                          <th>Address</th>
-                          <th>Contact</th>
-                          <th>Location</th>
-                          <th>Description</th>
-                          <th>Status</th>
-                          <th>Acion</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>La Jarden Art & Craft</td>
-                          <td>134-A, near shri hari public</td>
-                          <td>087707 67573</td>
-                          <td>Veena nagar</td>
-                          <td>We are a India's wel..</td>
-                          <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="In-active"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-
-
-                          <td>
-                            <a href="#" className="action-icon">
-                              <i className="mdi mdi-pencil" />
-                            </a>
-                            <a href="#" className="action-icon">
-                              <i className="mdi mdi-delete" />
-                            </a>
-                            
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <Table
+                      columns={columns}
+                      dataSource={data}
+                      onChange={onChange}
+                    />
                   </div>{" "}
-                  {/* end row*/}
                 </div>{" "}
               </div>
-              {/* end card*/}
             </div>{" "}
-            {/* end col*/}
           </div>
           <Art_craft_RB />
         </div>

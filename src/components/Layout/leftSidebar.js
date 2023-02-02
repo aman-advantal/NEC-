@@ -212,28 +212,22 @@ export const LeftSidebar = () => {
               <div className="collapse" id="sidebarNews">
                 <ul className="side-nav-second-level">
                   <li>
-                    <Link>Muncipal Office Contact</Link>
+                    <Link to={ROUTES.MUNICIPAL_INFO}>Municipal Officer</Link>
                   </li>
                   <li>
-                    <Link>Water Supply Information</Link>
+                    <Link to={ROUTES.WATER_SUPPLY}>
+                      Water/Power Supply <br />
+                      Information
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to={ROUTES.GARBAGE_COLLECTION}>
+                      Garbage Collection Schedule
+                    </Link>
                   </li>
                   <li>
-                    <Link>Power Supply Information</Link>
-                  </li>
-                  <li>
-                    <Link>Garbage Collection Schedule</Link>
-                  </li>
-                  <li>
-                    <Link>List of Schools</Link>
-                  </li>
-                  <li>
-                    <Link>Community Centers</Link>
-                  </li>
-                  <li>
-                    <Link>List of playing Grounds</Link>
-                  </li>
-                  <li>
-                    <Link>Parks</Link>
+                    <Link to={ROUTES.OTHERS}>Others</Link>
                   </li>
                 </ul>
               </div>
@@ -262,90 +256,7 @@ export const LeftSidebar = () => {
                 <span> FeedBack/Input</span>
               </Link>
             </li>
-            {/* <li className="side-nav-item">
-              <a
-                data-bs-toggle="collapse"
-                href="#sidebarHelp"
-                aria-expanded="false"
-                aria-controls="sidebarHelp"
-                className="side-nav-link"
-              >
-                <i class="uil-window"></i>
 
-                <span>Smart Elements </span>
-                <span className="menu-arrow" />
-              </a>
-              <div className="collapse" id="sidebarHelp">
-                <ul className="side-nav-second-level">
-                  <li>
-                    <Link>City level AQI</Link>
-                  </li>
-                  <li>
-                    <Link>Environment Sensor Reading </Link>
-                  </li>
-                </ul>
-              </div>
-            </li> */}
-            {/* <li className="side-nav-item">
-              <a
-                data-bs-toggle="collapse"
-                href="#sidebarPublic"
-                aria-expanded="false"
-                aria-controls="sidebarPublic"
-                className="side-nav-link"
-              >
-                <i class="uil-table"></i>
-
-                <span>Public Services </span>
-                <span className="menu-arrow" />
-              </a>
-              <div className="collapse" id="sidebarPublic">
-                <ul className="side-nav-second-level">
-                  <li>
-                    <Link>Traffic Challan</Link>
-                  </li>
-                  <li>
-                    <Link>Check & Pay Tax </Link>
-                  </li>
-                </ul>
-              </div>
-            </li> */}
-            {/* <li className="side-nav-item">
-              <a
-                data-bs-toggle="collapse"
-                href="#sidebarCitizen"
-                aria-expanded="false"
-                aria-controls="sidebarCitizen"
-                className="side-nav-link"
-              >
-                <i class="uil-location-point"></i>
-
-                <span>Citizen Services </span>
-                <span className="menu-arrow" />
-              </a>
-              <div className="collapse" id="sidebarCitizen">
-                <ul className="side-nav-second-level">
-                  <li>
-                    <Link>Birth Certificates</Link>
-                  </li>
-                  <li>
-                    <Link>Death Certificates </Link>
-                  </li>
-                  <li>
-                    <Link>Marriage Registrations </Link>
-                  </li>
-                  <li>
-                    <Link>Trade Licenses </Link>
-                  </li>
-                  <li>
-                    <Link>RTI </Link>
-                  </li>
-                  <li>
-                    <Link>Building Plan Permissions </Link>
-                  </li>
-                </ul>
-              </div>
-            </li> */}
             <li className="side-nav-item">
               <a
                 data-bs-toggle="collapse"
@@ -355,7 +266,6 @@ export const LeftSidebar = () => {
                 className="side-nav-link"
               >
                 <i class="mdi mdi-close"></i>
-                {/* <span className="badge bg-success float-end">5</span> */}
                 <span>Grievance Services </span>
                 <span className="menu-arrow" />
               </a>
@@ -363,7 +273,8 @@ export const LeftSidebar = () => {
                 <ul className="side-nav-second-level">
                   <li>
                     <Link to={ROUTES.CIVIC_INFRASTACTURE}>
-                      Civic Infrastructure Issue Reporting
+                      Civic Infrastructure <br />
+                      Issue Reporting
                     </Link>
                   </li>
                   <li>
@@ -379,7 +290,8 @@ export const LeftSidebar = () => {
                   </li>
                   <li>
                     <Link to={ROUTES.PUNLIC_CONVIEMNCE}>
-                      Public Convienance Services Reporting{" "}
+                      Public Convienance <br />
+                      Services Reporting{" "}
                     </Link>
                   </li>
                 </ul>

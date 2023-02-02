@@ -1,7 +1,81 @@
+import { Table } from "antd";
 import React from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 
 export const Staff = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      sortDirections: ["descend"],
+    },
+
+    {
+      title: "Email",
+      dataIndex: "email",
+    },
+    {
+      title: "Role",
+      dataIndex: "role",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      name: "Aman Gupta",
+      email: "amang6565@gmail.com",
+      role: "Manager",
+
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -16,67 +90,15 @@ export const Staff = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Rohit Jain</td>
-                        <td>rohit@123.com</td>
-                        <td>Admin</td>
-                        <td>
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="Inactive"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-
-                        {/* <td className="table-action">
-                              <a href="#" className="action-icon">
-                                
-                                <i className="mdi mdi-pencil" />
-                              </a>
-                              <a href="#" className="action-icon">
-                                
-                                <i className="mdi mdi-delete" />
-                              </a>
-                              <a href="#" className="action-icon">
-                                <i className="uil uil-eye" />
-                              </a>
-                            </td> */}
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>
-                {/* end row*/}
               </div>
             </div>
-            {/* end card*/}
           </div>
-          {/* end col*/}
         </div>
       </div>
     </>

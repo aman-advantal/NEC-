@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-
 const Civic_Infra_Comment_RB = () => {
-    const [date, setDate] = useState();
+  const [date, setDate] = useState();
 
-    console.log("Date", date);
+  console.log("Date", date);
 
   return (
     <>
@@ -36,39 +35,32 @@ const Civic_Infra_Comment_RB = () => {
             </div>
             <form action="#">
               <div className="modal-body">
-              {/* <div className="col-4"> */}
-                  <div className="mb-3">
-                    <label htmlFor="example-select" className="form-label">
-                     Status
-                    </label>
-                    <select className="form-select" id="example-select">
-                      <option>Select</option>
-                      <option>Pending </option>
-                      <option>In Progress</option>
-                      <option>Closed</option>
-                      <option>Reopen</option>
-                    </select>
+                {/* <div className="col-4"> */}
+                <div className="mb-3">
+                  <label htmlFor="example-select" className="form-label">
+                    Status
+                  </label>
+                  <select className="form-select" id="example-select">
+                    <option>Select</option>
+                    <option>Pending </option>
+                    <option>In Progress</option>
+                    <option>Closed</option>
+                    <option>Reopen</option>
+                  </select>
                   {/* </div> */}
                 </div>
 
-
-
                 <div className="mb-3">
-              <label for="example-textarea" class="form-label">
-                Comment 
-              </label>
-              <textarea
-                class="form-control"
-                id="example-textarea"
-                rows="5"
-                placeholder="Comment"
-              ></textarea>
-            </div>
-                
-
-    
-
-
+                  <label for="example-textarea" class="form-label">
+                    Comment
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="example-textarea"
+                    rows="5"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
               </div>
               <div className="modal-footer">
                 <button

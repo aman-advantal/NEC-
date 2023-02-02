@@ -1,7 +1,86 @@
+import { Table } from "antd";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import { FeedBack_Comment_RB } from "../../components/Shared/Modals/Feedback_RB";
 
 export const Feedback = () => {
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "FeedBack Type",
+      dataIndex: "type",
+    },
+    {
+      title: "UserName",
+      dataIndex: "user_name",
+    },
+    {
+      title: "Contact Number",
+      dataIndex: "contact",
+    },
+    {
+      title: "FeedBack",
+      dataIndex: "feedback",
+    },
+    {
+      title: "Submitted Date",
+      dataIndex: "submitted_date",
+    },
+    {
+      title: "Attachment",
+      dataIndex: "attachment",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      type: "PWD Department",
+      contact: "9898098965",
+      user_name: "Rohit",
+      feedback: "feedback",
+      submitted_date: "13/20/2022",
+      attachment: (
+        <a href="#" className="action-icon">
+          <i
+            className=" mdi mdi-file-image text-primary"
+            style={{ fontSize: "25px" }}
+          />
+        </a>
+      ),
+      status: (
+        <div className="badge bg-success p-1 rounded-3">
+          <span>Pending</span>
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i
+              className=" mdi mdi-comment icon-color"
+              style={{ fontSize: "20px" }}
+              data-bs-toggle="modal"
+              data-bs-target="#Comment_modal"
+            />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
   return (
     <>
       <div>
@@ -10,85 +89,23 @@ export const Feedback = () => {
           title1={"Nec"}
           title2={"FeedBack/Input"}
         />
-        {/* <div className="row ">
-          <div className="col-lg-12">
-            <div className="card p-2">
-              <div className="row g-0 align-items-center">
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>FeedBack Type</th>
-                        <th>User Name</th>
-                        <th>Contact No.</th>
-                        <th>FeedBack</th>
-                        <th>Submitted Date</th>
-                        <th>Attachment</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>PWD Department</td>
-                        <td>Ankrita</td>
-                        <td>456789033</td>
-                        <td>sdfghjk</td>
-                        <td>2-4-2023</td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-file-image text-primary"
-                              style={{ fontSize: "25px" }}
-                            />
-                          </a>
-                        </td>
-
-                        <td>
-                          {" "}
-                          <div className="badge bg-success p-1 rounded-3">
-                            <span>Pending</span>
-                          </div>
-                        </td>
-                        <td>
-                          {" "}
-                          <a href="#" className="action-icon">
-                            <i
-                              className=" mdi mdi-comment"
-                              style={{ fontSize: "20px" }}
-                              data-bs-toggle="modal"
-                              data-bs-target="#Comment_modal"
-                            />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>{" "}
-                {/* end row*/}
               </div>{" "}
             </div>
-            {/* end card*/}
           </div>{" "}
-          {/* end col*/}
         </div>
-        {/* <FeedBack_Comment_RB/> */}
+
         <FeedBack_Comment_RB />
       </div>
     </>
