@@ -105,7 +105,67 @@ export const Educational_Instituion = () => {
           title1={"Nec"}
           title2={"Educational Institution"}
         />
-        <div className="row ">
+<div className="row ">
+          <div className="col-lg-12">
+            <div className="card p-2">
+              <div className="row g-0 align-items-center">
+                <div className="col-3">
+                  <div className="input-group">
+                    <input
+                      type="search"
+                      className="form-control dropdown-toggle "
+                      placeholder="Search..."
+                      id="top-search"
+                    />
+                  </div>
+                </div>
+                <div className="col-9">
+                  <div className="row">
+                    <div className="col-3"></div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      
+                      <select class="form-select" id="example-select">
+                      <option selected>Filter Name</option>
+                        <option>Shri G.S. Institute</option>
+                        <option>Indore Institute of Science</option>
+                        <option>Prestige Public School</option>
+                        <option>G-Kids International School</option>
+                        <option>Birla Open Minds International School</option>    
+                        
+                       
+                      </select>
+                    </div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      
+                      <select class="form-select" id="example-select">
+                      <option selected>Filter Type</option>
+                        <option>School</option>
+                        <option>Collage</option>
+                        <option>Kids School</option>
+                        <option>Learning Center</option>
+                      </select>
+                    </div>
+
+                    <div className="col-3 d-flex justify-content-end">
+                    <button
+                    type="button"
+                    class="btn btn-primary w-100"
+                    style={{ border: "none" }}
+                    data-bs-toggle="modal"
+                    data-bs-target="#edu_of_city_modal"
+                  >
+                    Add Education
+                  </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
               <div className="row g-0 align-items-center">
@@ -123,7 +183,7 @@ export const Educational_Instituion = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">

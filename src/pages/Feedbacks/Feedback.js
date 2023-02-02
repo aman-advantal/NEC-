@@ -89,6 +89,57 @@ export const Feedback = () => {
           title1={"Nec"}
           title2={"FeedBack/Input"}
         />
+<div className="row ">
+          <div className="col-lg-12">
+            <div className="card p-2">
+              <div className="row g-0 align-items-center">
+                <div className="col-3">
+                  <div className="input-group">
+                    <input
+                      type="search"
+                      className="form-control dropdown-toggle "
+                      placeholder="Search..."
+                      id="top-search"
+                    />
+                  </div>
+                </div>
+                <div className="col-9">
+                  <div className="row">
+                    <div className="col-3"></div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      
+                      {/* <select class="form-select" id="example-select">
+                      <option selected>Filter Info</option>
+                        <option>Water Information</option>
+                        <option>Power Information</option>
+                        <option>Garbage Information</option>
+                      </select> */}
+                    </div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      
+                      {/* <select class="form-select" id="example-select">
+                      <option selected>Filter Type</option>
+                        <option>PWD Department</option>
+                        <option>Municipal Department</option>
+                        <option>Health Department</option>
+                      </select> */}
+                    </div>
+
+                    <div className="col-3 d-flex justify-content-end">
+                    <select class="form-select" id="example-select">
+                      <option selected>Filter Type</option>
+                        <option>PWD Department</option>
+                        <option>Municipal Department</option>
+                        <option>Health Department</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div className="row ">
           <div className="col-lg-12">
