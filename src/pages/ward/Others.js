@@ -1,26 +1,115 @@
-import { useState } from "react"
+import { Table } from "antd";
+import { useState } from "react";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 import Others_RB from "../../components/Shared/Modals/Others_RB";
 
 export const Others = () => {
-
-  const [Announcemento, setAnnouncemento] = useState()
+  const [Announcemento, setAnnouncemento] = useState();
   const handleClickRB = () => {
-    setAnnouncemento(0)
-  }
+    setAnnouncemento(0);
+  };
   const handleClick = () => {
-    setAnnouncemento(1)
-  }
+    setAnnouncemento(1);
+  };
+  const columns = [
+    {
+      title: "S.No",
+      dataIndex: "sno",
+      sorter: (a, b) => a.sno - b.sno,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Type",
+      dataIndex: "type",
+    },
 
+    {
+      title: "Name",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      sortDirections: ["descend"],
+    },
+    {
+      title: "Contact Person",
+      dataIndex: "contact_person",
+    },
+    {
+      title: "Contact Number",
+      dataIndex: "contact",
+    },
+    {
+      title: "Announcement",
+      dataIndex: "announcement",
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+    },
+  ];
+  const data = [
+    {
+      sno: 1,
+      type: "Garbage Collector",
+      name: "Abhay Singh",
+      contact_person: "Aman",
+      timing: "9 am - 11 am",
+      announcement: (
+        <a href="#" className="action-icon">
+          {" "}
+          <i
+            className="mdi mdi-bullhorn-variant text-primary"
+            style={{ border: "none" }}
+            data-bs-toggle="modal"
+            data-bs-target="#others_modal"
+            onClick={handleClick}
+          />
+        </a>
+      ),
+      contact: "9897898769",
+      status: (
+        <div>
+          <input
+            type="checkbox"
+            id="switch01"
+            defaultChecked="true"
+            data-switch="success"
+          />
+          <label
+            htmlFor="switch01"
+            data-on-label="Active"
+            data-off-label="In-active"
+            className="mb-0 d-block"
+            style={{ width: "70px" }}
+          />
+        </div>
+      ),
+      action: (
+        <div>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-pencil font-20 icon-color" />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="mdi mdi-delete font-20 icon-color " />
+          </a>
+          <a href="#" className="action-icon">
+            <i className="uil uil-eye font-20 icon-color" />
+          </a>
+        </div>
+      ),
+    },
+  ];
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log("params", pagination, filters, sorter, extra);
+  };
 
   return (
     <>
       <div>
-        <CustomHeader
-          title={"Others"}
-          title1={"NEC"}
-          title2={"Others"}
-        />
+        <CustomHeader title={"Others"} title1={"NEC"} title2={"Others"} />
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
@@ -46,133 +135,19 @@ export const Others = () => {
             <div className="card p-2">
               <div className="row g-0 align-items-center">
                 <div>
-                  <table
-                    id="basic-datatable"
-                    className="table dt-responsive nowrap w-100 "
-                  >
-                    <thead>
-                      <tr>
-                        <th>Type</th>
-                        <th>Name</th>
-                        <th>Contact Person</th>
-                        <th>Contact No.</th>
-                        <th>Announcement</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>Schools</td>
-                        <td>Bombay International School</td>
-                        <td>Upendra Dhar</td>
-                        <td>2457765433</td>
-                        <td className="table-action">
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-bullhorn-variant text-primary " style={{ border: "none" }}
-                              data-bs-toggle="modal"
-                              data-bs-target="#others_modal" onClick={handleClick} />
-                          </a>
-                        </td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="Inactive"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-
-                        <td className="table-action">
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-
-                    <tbody>
-                      <tr>
-                        <td>Parks</td>
-                        <td>Shikha Seher park</td>
-                        <td>Sheleindra Khatri</td>
-                        <td>2454676533</td>
-                        <td className="table-action">
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-bullhorn-variant text-primary " style={{ border: "none" }}
-                              data-bs-toggle="modal"
-                              data-bs-target="#others_modal" onClick={handleClick} />
-                          </a>
-                        </td>
-                        <td>
-                          {" "}
-                          <div>
-                            <input
-                              type="checkbox"
-                              id="switch01"
-                              defaultChecked="true"
-                              data-switch="success"
-                            />
-                            <label
-                              htmlFor="switch01"
-                              data-on-label="Active"
-                              data-off-label="Inactive"
-                              className="mb-0 d-block"
-                              style={{ width: "70px" }}
-                            />
-                          </div>
-                        </td>
-
-                        <td className="table-action">
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-pencil" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            {" "}
-                            <i className="mdi mdi-delete" />
-                          </a>
-                          <a href="#" className="action-icon">
-                            <i className="uil uil-eye" />
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  {" "}
+                  <Table
+                    columns={columns}
+                    dataSource={data}
+                    onChange={onChange}
+                  />
                 </div>{" "}
-                {/* end row*/}
               </div>{" "}
             </div>
-            {/* end card*/}
           </div>{" "}
-          {/* end col*/}
         </div>
-        <Others_RB
-          Announcemento={Announcemento}
-        />
+        <Others_RB Announcemento={Announcemento} />
       </div>
-
     </>
-  )
-}
+  );
+};

@@ -45,17 +45,14 @@ export const ROUTES = {
   HEALTH_SERVICE: process.env.PUBLIC_URL + "/health-service",
   //
   AMBULANCE_LIST: process.env.PUBLIC_URL + "/ambulance-list",
-  // 
+  //
   FEEDBACK: process.env.PUBLIC_URL + "/feedback",
-  CIVIC_INFRASTACTURE:process.env.PUBLIC_URL + "/civic-infrastructure",
-  ENFORCEMENT_REPORTING:process.env.PUBLIC_URL + "/enforcement-reporting",
-  SANITATION_ISSUE:process.env.PUBLIC_URL + "/Sanitation-issue",
-  PUNLIC_CONVIEMNCE:process.env.PUBLIC_URL + "/public-convience",
-  MUNICIPAL_INFO:process.env.PUBLIC_URL + "/ward/municipal-info",
-  WATER_SUPPLY:process.env.PUBLIC_URL + "/Ward/water-supply",
-  GARBAGE_COLLECTION:process.env.PUBLIC_URL + "/ward/garbage-collection",
-  OTHERS:process.env.PUBLIC_URL + "/ward//others",
-
-  
+  CIVIC_INFRASTACTURE: process.env.PUBLIC_URL + "/civic-infrastructure",
+  ENFORCEMENT_REPORTING: process.env.PUBLIC_URL + "/enforcement-reporting",
+  SANITATION_ISSUE: process.env.PUBLIC_URL + "/Sanitation-issue",
+  PUNLIC_CONVIEMNCE: process.env.PUBLIC_URL + "/public-convience",
+  MUNICIPAL_INFO: process.env.PUBLIC_URL + "/municipal-info",
+  WATER_SUPPLY: process.env.PUBLIC_URL + "/water-supply",
+  GARBAGE_COLLECTION: process.env.PUBLIC_URL + "/garbage-collection",
+  OTHERS: process.env.PUBLIC_URL + "/others",
 };
-
