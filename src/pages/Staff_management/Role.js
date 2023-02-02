@@ -89,6 +89,39 @@ export const Role = () => {
           title1={"Staff Managemet"}
           title2={"Role"}
         />
+        <div className="row ">
+          <div className="col-lg-12">
+            <div className="card p-2">
+              <div className="row g-0 align-items-center">
+                <div className="col-3">
+                  <div className="input-group">
+                    <input
+                      type="search"
+                      className="form-control dropdown-toggle "
+                      placeholder="Search..."
+                      id="top-search"
+                    />
+                  </div>
+                </div>
+                {/* <div className="col-lg-9">
+                  <div className="row g-0 align-items-center">
+                    <div style={{ display: "flex", justifyContent: "end" }}>
+                      <button
+                        type="button"
+                        class="btn btn-primary "
+                        style={{ border: "none" }}
+                        data-bs-toggle="modal"
+                        data-bs-target="#Art_of_city_modal"
+                      >
+                        Add Art and Craft
+                      </button>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="row ">
           <div className="col-lg-12">

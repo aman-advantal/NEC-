@@ -92,25 +92,60 @@ export const Places_to_visit = () => {
           title1={"City"}
           title2={"Place to visit"}
         />
-        <div className="row ">
+
+<div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
               <div className="row g-0 align-items-center">
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                  <button
-                    type="button"
-                    class="btn btn-primary "
-                    style={{ border: "none" }}
-                    data-bs-toggle="modal"
-                    data-bs-target="#place_to_visit_modal"
-                  >
-                    Add Place to Visit
-                  </button>
+                <div className="col-3">
+                  <div className="input-group">
+                    <input
+                      type="search"
+                      className="form-control dropdown-toggle "
+                      placeholder="Search..."
+                      id="top-search"
+                    />
+                  </div>
+                </div>
+                <div className="col-9">
+                  <div className="row">
+                    <div className="col-3"></div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      {/* 
+                      <select class="form-select mt-1" id="example-select">
+                        <option>Tourism Destination</option>
+                        <option>Historical Place</option>
+                       
+                      </select> */}
+                    </div>
+                    <div className="col-3 d-flex flex-column justify-content-end">
+                      
+                      <select class="form-select" id="example-select">
+                        <option selected>Filter Category</option>
+                        <option>Tourism Destination</option>
+                        <option>Historical Place</option>
+                       
+                      </select>
+                    </div>
+
+                    <div className="col-3 d-flex justify-content-end">
+                      <button
+                        type="button"
+                        class="btn btn-primary w-100"
+                        style={{ border: "none" }}
+                        data-bs-toggle="modal"
+                        data-bs-target="#place_to_visit_modal"
+                      >
+                        Add Places to visit
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">
