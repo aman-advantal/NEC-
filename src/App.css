@@ -2,6 +2,7 @@
   --primary: #102e60;
   --primaryDark: #002b62;
   --white: #ffffff;
+  
 }
 html[data-sidenav-size="condensed"]:not([data-layout="topnav"])
   .wrapper
