@@ -1,764 +1,508 @@
 import { SubHeader } from "../../components/Shared/common/SubHeader";
+import React from "react";
+import { PieChart, Pie, Cell } from "recharts";
+
+const data = [
+  { name: "Group A", value: 400 },
+  { name: "Group B", value: 300 },
+  { name: "Group C", value: 300 },
+  { name: "Group D", value: 200 },
+];
+
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+  index,
+}) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="white"
+      textAnchor={x > cx ? "start" : "end"}
+      dominantBaseline="central"
+    >
+      {`${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
 
 export const Home = () => {
   return (
     <>
-      <SubHeader title={"Dashboard"} />
+      <SubHeader title={"Dashboard/Overview & Statics "} />
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12">
+          <div className="col-8">
             <div className="row">
-              <div className="col-sm-4">
+              <div className="col-sm-6">
                 <div className="card widget-flat">
                   <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-account-multiple widget-icon" />
+                    <div className=" d-flex  flex-column justify-content-center align-items-center">
+                      <h4 style={{ color: `red`, fontWeight: "700" }}>20</h4>
+
+                      <h4>Registered Users</h4>
                     </div>
-                    <h5
-                      className="text-muted fw-normal mt-0"
-                      title="Number of Customers"
-                    >
-                      No. of tenders
-                    </h5>
-                    <h3 className="mt-3 mb-3">36,254</h3>
-                    <p className="mb-0 text-muted">
-                      <span className="text-success me-2">
-                        <i className="mdi mdi-arrow-up-bold" /> 5.27%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
                   </div>
-
                 </div>
-
               </div>
 
-              <div className="col-sm-4">
+              <div className="col-sm-6">
                 <div className="card widget-flat">
                   <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-cart-plus widget-icon" />
+                    <div className=" d-flex  flex-column justify-content-center align-items-center">
+                      <h4 style={{ color: `red`, fontWeight: "700" }}>30</h4>
+
+                      <h4>Logged In Users</h4>
                     </div>
-                    <h5
-                      className="text-muted fw-normal mt-0"
-                      title="Number of Orders"
-                    >
-                      No. of Downloads
-                    </h5>
-                    <h3 className="mt-3 mb-3">5,543</h3>
-                    <p className="mb-0 text-muted">
-                      <span className="text-danger me-2">
-                        <i className="mdi mdi-arrow-down-bold" /> 1.08%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
                   </div>
-
                 </div>
-
               </div>
-
-              <div className="col-sm-4">
-                <div className="card widget-flat">
-                  <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-cart-plus widget-icon" />
-                    </div>
-                    <h5
-                      className="text-muted fw-normal mt-0"
-                      title="Number of Orders"
-                    >
-                     No. of Recruiters
-                    </h5>
-                    <h3 className="mt-3 mb-3">7,543</h3>
-                    <p className="mb-0 text-muted">
-                    <span className="text-success me-2">
-                        <i className="mdi mdi-arrow-up-bold" /> 4.27%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
             </div>
 
             <div className="row">
-              <div className="col-sm-4">
+              <div className="col-sm-12">
                 <div className="card widget-flat">
                   <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-currency-usd widget-icon" />
+                    <div>
+                      <ul className="nav nav-tabs nav-bordered mb-3">
+                        <li className="nav-item">
+                          <a
+                            href="#home-b1"
+                            data-bs-toggle="tab"
+                            aria-expanded="false"
+                            className="nav-link"
+                          >
+                            <i className="mdi mdi-home-variant d-md-none d-block" />
+                            <span
+                              className="d-none d-md-block "
+                              style={{ color: `var(--primary)` }}
+                            >
+                              Complaints Overview
+                            </span>
+                          </a>
+                        </li>
+                        <li className="nav-item">
+                          <a
+                            href="#profile-b1"
+                            data-bs-toggle="tab"
+                            aria-expanded="true"
+                            className="nav-link active"
+                          >
+                            <i className="mdi mdi-account-circle d-md-none d-block" />
+                            <span
+                              className="d-none d-md-block"
+                              style={{ color: `var(--primary)` }}
+                            >
+                              About City Places
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                      <div className="tab-content">
+                        <div className="tab-pane" id="home-b1">
+                          <div className="row">
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      20
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Sanitaion Issue
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      3
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Civic
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      12
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Enforcememnt
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      17
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Garbage
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      8
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Municipal
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      11
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Water Supply
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane show active" id="profile-b1">
+                          <div className="row">
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      20
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Where To Eat
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      10
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Where To Stay
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      10
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Place To Visit
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      17
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Historical
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      9
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Heritage
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="card widget-flat">
+                                <div
+                                  className="card-body"
+                                  style={{ background: `var(--primary)` }}
+                                >
+                                  <div className=" d-flex  flex-column justify-content-center align-items-center">
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      11
+                                    </h4>
+
+                                    <h4
+                                      style={{
+                                        color: `var(--white)`,
+                                        fontWeight: "700",
+                                      }}
+                                    >
+                                      Religious
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <h5
-                      className="text-muted fw-normal mt-0"
-                      title="Average Revenue"
-                    >
-                      Revenue
-                    </h5>
-                    <h3 className="mt-3 mb-3">$6,254</h3>
-                    <p className="mb-0 text-muted">
-                      <span className="text-danger me-2">
-                        <i className="mdi mdi-arrow-down-bold" /> 7.00%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
                   </div>
-
                 </div>
-
               </div>
-
-              <div className="col-sm-4">
-                <div className="card widget-flat">
-                  <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-pulse widget-icon" />
-                    </div>
-                    <h5 className="text-muted fw-normal mt-0" title="Growth">
-                      Growth
-                    </h5>
-                    <h3 className="mt-3 mb-3">+ 30.56%</h3>
-                    <p className="mb-0 text-muted">
-                      <span className="text-success me-2">
-                        <i className="mdi mdi-arrow-up-bold" /> 4.87%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div className="col-sm-4">
-                <div className="card widget-flat">
-                  <div className="card-body">
-                    <div className="float-end">
-                      <i className="mdi mdi-pulse widget-icon" />
-                    </div>
-                    <h5 className="text-muted fw-normal mt-0" title="Growth">
-                      Smart Services
-                    </h5>
-                    <h3 className="mt-3 mb-3">+ 10.56%</h3>
-                    <p className="mb-0 text-muted">
-                      <span className="text-success me-2">
-                        <i className="mdi mdi-arrow-up-bold" /> 3.87%
-                      </span>
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
             </div>
-
           </div>
+          <div className="col-4">
+            <div className="col-sm-12">
+              <div className="card widget-flat">
+                <div className="card-body">
+                  <h3 style={{ color: `var(--primary)` }}>Citizen Service</h3>
 
-          {/* <div className="col-xl-7 col-lg-6">
-            <div className="card card-h-100">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Projections Vs Actuals</h4>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle arrow-none card-drop"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
-                    <i className="mdi mdi-dots-vertical" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Sales Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Export Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Profit
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Action
-                    </a>
+                    <PieChart width={400} height={400}>
+                      <Pie
+                        data={data}
+                        labelLine={false}
+                        label={renderCustomizedLabel}
+                        outerRadius={120}
+                        fill="#8884d8"
+                        dataKey="value"
+                      >
+                        {data.map((entry, index) => (
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={COLORS[index % COLORS.length]}
+                          />
+                        ))}
+                      </Pie>
+                    </PieChart>
                   </div>
                 </div>
               </div>
-              <div className="card-body pt-0">
-                <div dir="ltr">
-                  <div
-                    id="high-performing-product"
-                    className="apex-charts"
-                    data-colors="#727cf5,#e3eaef"
-                  />
-                </div>
-              </div>
-
             </div>
-
-          </div> */}
-
+          </div>
         </div>
-
-        {/* <div className="row">
-          <div className="col-lg-8">
-            <div className="card">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Revenue</h4>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle arrow-none card-drop"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i className="mdi mdi-dots-vertical" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Sales Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Export Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Profit
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Action
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="card-body pt-0">
-                <div className="chart-content-bg">
-                  <div className="row text-center">
-                    <div className="col-sm-6">
-                      <p className="text-muted mb-0 mt-3">Current Week</p>
-                      <h2 className="fw-normal mb-3">
-                        <small className="mdi mdi-checkbox-blank-circle text-primary align-middle me-1" />
-                        <span>$58,254</span>
-                      </h2>
-                    </div>
-                    <div className="col-sm-6">
-                      <p className="text-muted mb-0 mt-3">Previous Week</p>
-                      <h2 className="fw-normal mb-3">
-                        <small className="mdi mdi-checkbox-blank-circle text-success align-middle me-1" />
-                        <span>$69,524</span>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="dash-item-overlay d-none d-md-block" dir="ltr">
-                  <h5>Today's Earning: $2,562.30</h5>
-                  <p className="text-muted font-13 mb-3 mt-2">
-                    Etiam ultricies nisi vel augue. Curabitur ullamcorper
-                    ultricies nisi. Nam eget dui. Etiam rhoncus...
-                  </p>
-                  <a
-                    href="javascript: void(0);"
-                    className="btn btn-outline-primary"
-                  >
-                    View Statements
-                    <i className="mdi mdi-arrow-right ms-2" />
-                  </a>
-                </div>
-                <div dir="ltr">
-                  <div
-                    id="revenue-chart"
-                    className="apex-charts mt-3"
-                    data-colors="#727cf5,#0acf97"
-                  />
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-lg-4">
-            <div className="card">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Revenue By Location</h4>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle arrow-none card-drop"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i className="mdi mdi-dots-vertical" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Sales Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Export Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Profit
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Action
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="card-body pt-0">
-                <div className="mb-4 mt-3">
-                  <div id="world-map-markers" style={{ height: "217px" }} />
-                </div>
-                <h5 className="mb-1 mt-0 fw-normal">New York</h5>
-                <div className="progress-w-percent">
-                  <span className="progress-value fw-bold">72k </span>
-                  <div className="progress progress-sm">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: "72%" }}
-                      aria-valuenow={72}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
-                  </div>
-                </div>
-                <h5 className="mb-1 mt-0 fw-normal">San Francisco</h5>
-                <div className="progress-w-percent">
-                  <span className="progress-value fw-bold">39k </span>
-                  <div className="progress progress-sm">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: "39%" }}
-                      aria-valuenow={39}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
-                  </div>
-                </div>
-                <h5 className="mb-1 mt-0 fw-normal">Sydney</h5>
-                <div className="progress-w-percent">
-                  <span className="progress-value fw-bold">25k </span>
-                  <div className="progress progress-sm">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: "39%" }}
-                      aria-valuenow={39}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
-                  </div>
-                </div>
-                <h5 className="mb-1 mt-0 fw-normal">Singapore</h5>
-                <div className="progress-w-percent mb-0">
-                  <span className="progress-value fw-bold">61k </span>
-                  <div className="progress progress-sm">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: "61%" }}
-                      aria-valuenow={61}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div> */}
-
-        {/* <div className="row">
-          <div className="col-xl-6 col-lg-12 order-lg-2 order-xl-1">
-            <div className="card">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Top Selling Products</h4>
-                <a href="javascript:void(0);" className="btn btn-sm btn-light">
-                  Export <i className="mdi mdi-download ms-1" />
-                </a>
-              </div>
-              <div className="card-body pt-0">
-                <div className="table-responsive">
-                  <table className="table table-centered table-nowrap table-hover mb-0">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">
-                            ASOS Ridley High Waist
-                          </h5>
-                          <span className="text-muted font-13">
-                            07 April 2018
-                          </span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$79.49</h5>
-                          <span className="text-muted font-13">Price</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">82</h5>
-                          <span className="text-muted font-13">Quantity</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$6,518.18</h5>
-                          <span className="text-muted font-13">Amount</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">
-                            Marco Lightweight Shirt
-                          </h5>
-                          <span className="text-muted font-13">
-                            25 March 2018
-                          </span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$128.50</h5>
-                          <span className="text-muted font-13">Price</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">37</h5>
-                          <span className="text-muted font-13">Quantity</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$4,754.50</h5>
-                          <span className="text-muted font-13">Amount</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">
-                            Half Sleeve Shirt
-                          </h5>
-                          <span className="text-muted font-13">
-                            17 March 2018
-                          </span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$39.99</h5>
-                          <span className="text-muted font-13">Price</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">64</h5>
-                          <span className="text-muted font-13">Quantity</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$2,559.36</h5>
-                          <span className="text-muted font-13">Amount</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">
-                            Lightweight Jacket
-                          </h5>
-                          <span className="text-muted font-13">
-                            12 March 2018
-                          </span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$20.00</h5>
-                          <span className="text-muted font-13">Price</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">184</h5>
-                          <span className="text-muted font-13">Quantity</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$3,680.00</h5>
-                          <span className="text-muted font-13">Amount</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">
-                            Marco Shoes
-                          </h5>
-                          <span className="text-muted font-13">
-                            05 March 2018
-                          </span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$28.49</h5>
-                          <span className="text-muted font-13">Price</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">69</h5>
-                          <span className="text-muted font-13">Quantity</span>
-                        </td>
-                        <td>
-                          <h5 className="font-14 my-1 fw-normal">$1,965.81</h5>
-                          <span className="text-muted font-13">Amount</span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="col-xl-3 col-lg-6 order-lg-1">
-            <div className="card">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Total Sales</h4>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle arrow-none card-drop"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i className="mdi mdi-dots-vertical" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Sales Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Export Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Profit
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Action
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="card-body pt-0">
-                <div
-                  id="average-sales"
-                  className="apex-charts mb-4 mt-2"
-                  data-colors="#727cf5,#0acf97,#fa5c7c,#ffbc00"
-                />
-                <div className="chart-widget-list">
-                  <p>
-                    <i className="mdi mdi-square text-primary" /> Direct
-                    <span className="float-end">$300.56</span>
-                  </p>
-                  <p>
-                    <i className="mdi mdi-square text-danger" /> Affilliate
-                    <span className="float-end">$135.18</span>
-                  </p>
-                  <p>
-                    <i className="mdi mdi-square text-success" /> Sponsored
-                    <span className="float-end">$48.96</span>
-                  </p>
-                  <p className="mb-0">
-                    <i className="mdi mdi-square text-warning" /> E-mail
-                    <span className="float-end">$154.02</span>
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="col-xl-3 col-lg-6 order-lg-1">
-            <div className="card">
-              <div className="d-flex card-header justify-content-between align-items-center">
-                <h4 className="header-title">Recent Activity</h4>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle arrow-none card-drop"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <i className="mdi mdi-dots-vertical" />
-                  </a>
-                  <div className="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Sales Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Export Report
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Profit
-                    </a>
-
-                    <a href="javascript:void(0);" className="dropdown-item">
-                      Action
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="card-body py-0 mb-3"
-                data-simplebar
-                style={{ maxHeight: "403px" }}
-              >
-                <div className="timeline-alt py-0">
-                  <div className="timeline-item">
-                    <i className="mdi mdi-upload bg-info-lighten text-info timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-info fw-bold mb-1 d-block"
-                      >
-                        You sold an item
-                      </a>
-                      <small>
-                        Paul Burgess just purchased “Hyper - Admin Dashboard”!
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">5 minutes ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-primary fw-bold mb-1 d-block"
-                      >
-                        Product on the Bootstrap Market
-                      </a>
-                      <small>
-                        Dave Gamache added
-                        <span className="fw-bold">Admin Dashboard</span>
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">30 minutes ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-microphone bg-info-lighten text-info timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-info fw-bold mb-1 d-block"
-                      >
-                        Robert Delaney
-                      </a>
-                      <small>
-                        Send you message
-                        <span className="fw-bold">"Are you there?"</span>
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">2 hours ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-upload bg-primary-lighten text-primary timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-primary fw-bold mb-1 d-block"
-                      >
-                        Audrey Tobey
-                      </a>
-                      <small>
-                        Uploaded a photo
-                        <span className="fw-bold">"Error.jpg"</span>
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">14 hours ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-upload bg-info-lighten text-info timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-info fw-bold mb-1 d-block"
-                      >
-                        You sold an item
-                      </a>
-                      <small>
-                        Paul Burgess just purchased “Hyper - Admin Dashboard”!
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">16 hours ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-primary fw-bold mb-1 d-block"
-                      >
-                        Product on the Bootstrap Market
-                      </a>
-                      <small>
-                        Dave Gamache added
-                        <span className="fw-bold">Admin Dashboard</span>
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">22 hours ago</small>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="timeline-item">
-                    <i className="mdi mdi-microphone bg-info-lighten text-info timeline-icon" />
-                    <div className="timeline-item-info">
-                      <a
-                        href="javascript:void(0);"
-                        className="text-info fw-bold mb-1 d-block"
-                      >
-                        Robert Delaney
-                      </a>
-                      <small>
-                        Send you message
-                        <span className="fw-bold">"Are you there?"</span>
-                      </small>
-                      <p className="mb-0 pb-2">
-                        <small className="text-muted">2 days ago</small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div> */}
-
       </div>
     </>
-  
   );
 };
