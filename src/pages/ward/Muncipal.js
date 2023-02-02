@@ -1,4 +1,4 @@
-import Muncipal_RB from "../../components/Shared/Modals/Comments_Modals/Muncipal_RB";
+import Muncipal_RB from "../../components/Shared/Modals/Muncipal_RB";
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
 
 export const Muncipal = () => {

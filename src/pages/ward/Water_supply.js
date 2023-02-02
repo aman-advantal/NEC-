@@ -1,5 +1,5 @@
 import { CustomHeader } from "../../components/Shared/common/CustomHeader"
-import Water_supply_RB from "../../components/Shared/Modals/Comments_Modals/Water_supply_RB"
+import Water_supply_RB from "../../components/Shared/Modals/Water_supply_RB"
 import React,{useState } from "react"
 
 export const Water_supply=()=>{

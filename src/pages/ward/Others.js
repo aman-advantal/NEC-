@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { CustomHeader } from "../../components/Shared/common/CustomHeader";
-import Others_RB from "../../components/Shared/Modals/Comments_Modals/Others_RB";
+import Others_RB from "../../components/Shared/Modals/Others_RB";
 
 export const Others = () => {
 
