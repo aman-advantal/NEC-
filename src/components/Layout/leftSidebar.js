@@ -65,7 +65,7 @@ export const LeftSidebar = () => {
           <ul className="side-nav">
             <li class="side-nav-item">
               <Link to={ROUTES.DASHBOARD} class="side-nav-link">
-                <i class="uil-comments-alt"></i>
+                <i class="uil-desktop-alt"></i>
                 <span> Dashboard </span>
               </Link>
             </li>
@@ -77,7 +77,7 @@ export const LeftSidebar = () => {
                 aria-controls="sidebarCity"
                 className="side-nav-link"
               >
-                <i class="uil-envelope"></i>
+                <i class="uil-map-pin-alt"></i>
 
                 <span> City </span>
                 <span className="menu-arrow" />
@@ -148,7 +148,7 @@ export const LeftSidebar = () => {
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.TENDER}>
-                <i class="uil-comments-alt"></i>
+                <i class="uil-file-check-alt"></i>
                 <span> Tenders </span>
               </Link>
             </li>
@@ -160,8 +160,8 @@ export const LeftSidebar = () => {
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.POLICY}>
-                <i class="uil-store"></i>
-                <span> GO/Policies</span>
+                <i class="uil-invoice"></i>
+                <span>GO/Policies</span>
               </Link>
             </li>
 
@@ -179,19 +179,19 @@ export const LeftSidebar = () => {
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.COMMUNITY_SERVICE}>
-                <i class="uil-folder-plus"></i>
+                <i class="uil-copy-alt"></i>
                 <span> Community Service</span>
               </Link>
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.EDUCATION_INSTITUTION}>
-                <i class="uil-copy-alt"></i>
+                <i class="uil-book-open"></i>
                 <span> Educational Institutions</span>
               </Link>
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.SPORT_FACILITY}>
-                <i class="uil-globe"></i>
+                <i class=" uil-basketball"></i>
                 <span> Sport Facility</span>
               </Link>
             </li>
@@ -204,7 +204,7 @@ export const LeftSidebar = () => {
                 aria-controls="sidebarNews"
                 className="side-nav-link"
               >
-                <i class="uil-box"></i>
+                <i class="uil-layer-group"></i>
 
                 <span> Wards Information </span>
                 <span className="menu-arrow" />
@@ -234,13 +234,14 @@ export const LeftSidebar = () => {
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.HEALTH_SERVICE}>
-                <i class="uil-layer-group"></i>
+                <i class="uil-medical-square-full
+"></i>
                 <span> Health Services</span>
               </Link>
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.EMERGENCY_SERVICE}>
-                <i class="uil-layer-group"></i>
+                <i class="uil-bus"></i>
                 <span>Emergency Services</span>
               </Link>
             </li>
@@ -252,7 +253,7 @@ export const LeftSidebar = () => {
             </li> */}
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.FEEDBACK}>
-                <i class="uil-document-layout-center"></i>
+                <i class="uil-comments"></i>
                 <span> FeedBack/Input</span>
               </Link>
             </li>
@@ -265,7 +266,7 @@ export const LeftSidebar = () => {
                 aria-controls="sidebarGrievance"
                 className="side-nav-link"
               >
-                <i class="mdi mdi-close"></i>
+                <i class="uil-server-connection"></i>
                 <span>Grievance Services </span>
                 <span className="menu-arrow" />
               </a>
