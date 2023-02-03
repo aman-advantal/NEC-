@@ -234,8 +234,10 @@ export const LeftSidebar = () => {
             </li>
             <li class="side-nav-item">
               <Link class="side-nav-link" to={ROUTES.HEALTH_SERVICE}>
-                <i class="uil-medical-square-full
-"></i>
+                <i
+                  class="uil-medical-square-full
+"
+                ></i>
                 <span> Health Services</span>
               </Link>
             </li>
@@ -298,38 +300,11 @@ export const LeftSidebar = () => {
                 </ul>
               </div>
             </li>
-            <li className="side-nav-item">
-              <a
-                data-bs-toggle="collapse"
-                href="#sidebarDisruption"
-                aria-expanded="false"
-                aria-controls="sidebarDisruption"
-                className="side-nav-link"
-              >
-                <i class="uil-table"></i>
-
-                <span>Disruptions </span>
-                <span className="menu-arrow" />
-              </a>
-              <div className="collapse" id="sidebarDisruption">
-                <ul className="side-nav-second-level">
-                  <li>
-                    <Link>Traffic</Link>
-                  </li>
-                  <li>
-                    <Link>Road </Link>
-                  </li>
-                  <li>
-                    <Link>Bridge Constructions </Link>
-                  </li>
-                  <li>
-                    <Link>Water Supply </Link>
-                  </li>
-                  <li>
-                    <Link>Drainage </Link>
-                  </li>
-                </ul>
-              </div>
+            <li class="side-nav-item">
+              <Link class="side-nav-link" to={ROUTES.DISRUPTION}>
+                <i class="uil-comments"></i>
+                <span> Disruption</span>
+              </Link>
             </li>
           </ul>
 

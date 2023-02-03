@@ -55,4 +55,5 @@ export const ROUTES = {
   WATER_SUPPLY: process.env.PUBLIC_URL + "/water-supply",
   GARBAGE_COLLECTION: process.env.PUBLIC_URL + "/garbage-collection",
   OTHERS: process.env.PUBLIC_URL + "/others",
+  DISRUPTION:process.env.PUBLIC_URL + "/disruption",
 };

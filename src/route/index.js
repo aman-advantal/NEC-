@@ -40,6 +40,7 @@ import { Muncipal } from "../pages/ward/Muncipal";
 import { Water_supply } from "../pages/ward/Water_supply";
 import { Garbage } from "../pages/ward/Garbage";
 import { Others } from "../pages/ward/Others";
+import { Disruption } from "../pages/Disruption/disruption";
 export const AppRouter = () => {
   const AllRoutes = [
     {
@@ -211,27 +212,32 @@ export const AppRouter = () => {
     {
       key: 36,
       path: ROUTES.CIVIC_INFRASTACTURE,
-      component:Civic_Infrastructure_Issue_Reporting,
+      component: Civic_Infrastructure_Issue_Reporting,
     },
     {
       key: 37,
       path: ROUTES.MUNICIPAL_INFO,
-      component:Muncipal,
+      component: Muncipal,
     },
     {
       key: 38,
       path: ROUTES.WATER_SUPPLY,
-      component:Water_supply,
+      component: Water_supply,
     },
     {
       key: 39,
       path: ROUTES.GARBAGE_COLLECTION,
-      component:Garbage,
+      component: Garbage,
     },
     {
       key: 40,
       path: ROUTES.OTHERS,
-      component:Others,
+      component: Others,
+    },
+    {
+      key: 41,
+      path: ROUTES.DISRUPTION,
+      component: Disruption,
     },
     // END City Routing
   ];
