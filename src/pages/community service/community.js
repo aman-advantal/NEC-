@@ -107,7 +107,7 @@ export const Community = () => {
       <div>
         <CustomHeader
           title={"Community Service"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Community service"}
         />
 <div className="row ">

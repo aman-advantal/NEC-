@@ -85,7 +85,7 @@ export const Downloads = () => {
   return (
     <>
       {" "}
-      <CustomHeader title={"Downloads"} title1={"Nec"} title2={"Downloads"} />
+      <CustomHeader title={"Downloads"} title1={"NEC"} title2={"Downloads"} />
       
       <div className="row ">
           <div className="col-lg-12">

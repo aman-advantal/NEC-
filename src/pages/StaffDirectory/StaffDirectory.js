@@ -95,7 +95,7 @@ export const StaffDirectory = () => {
       <div>
         <CustomHeader
           title={"Key Personnel-Staff Directory"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Key Personnel-Staff Directory"}
         />
 

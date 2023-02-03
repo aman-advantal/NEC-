@@ -134,7 +134,7 @@ export const Tender = () => {
   return (
     <>
       <div>
-        <CustomHeader title={"Tenders"} title1={"Nec"} title2={"Tenders"} />
+        <CustomHeader title={"Tenders"} title1={"NEC"} title2={"Tenders"} />
         <div className="row ">
           <div className="col-lg-12">
             <div className="card p-2">

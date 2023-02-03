@@ -93,7 +93,7 @@ export const Users_details = () => {
   return (
     <>
       <div>
-        <CustomHeader title={"Users"} title1={"Nec"} title2={"Users"} />
+        <CustomHeader title={"Users"} title1={"NEC"} title2={"Users"} />
 
         <div className="row ">
           <div className="col-lg-12">

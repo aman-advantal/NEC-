@@ -79,7 +79,7 @@ export const EmergencyService = () => {
       <div>
         <CustomHeader
           title={"Emergency Services"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Emergency Services"}
         />
 

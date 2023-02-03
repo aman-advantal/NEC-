@@ -62,7 +62,7 @@ export const Disruption_RB = () => {
                     placeholder="Title"
                   />
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Date
                   </label>
@@ -73,7 +73,7 @@ export const Disruption_RB = () => {
                     required
                     onChange={(e) => setDate(e.target.value)}
                   />
-                </div>
+                </div> */}
                 <div className="mb-3">
                   <label for="example-textarea" class="form-label">
                     Description

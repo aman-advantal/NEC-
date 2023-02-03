@@ -102,7 +102,7 @@ export const Educational_Instituion = () => {
       <div>
         <CustomHeader
           title={"Educational Institutions"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Educational Institution"}
         />
 <div className="row ">

@@ -5,9 +5,9 @@ export const Facts_at_glance = () => {
   return (
     <div>
       <CustomHeader
-        title={"Facts at glance"}
-        title1={"About Facts at glance"}
-        title2={"Add facts at glance"}
+        title={"Facts at a glance"}
+        title1={"City"}
+        title2={"Fact at a glance"}
       />
       <div className="row ">
         <div className="col-lg-12">

@@ -28,10 +28,10 @@ export const Disruption = () => {
       title: "Description",
       dataIndex: "description",
     },
-    {
-      title: "Status",
-      dataIndex: "status",
-    },
+    // {
+    //   title: "Status",
+    //   dataIndex: "status",
+    // },
     {
       title: "Action",
       dataIndex: "action",
@@ -44,31 +44,31 @@ export const Disruption = () => {
       category: "Traffic",
       date: "12/12/2022",
       description: "Diversion Description",
-      status: (
-        <div>
-          <input
-            type="checkbox"
-            id="switch01"
-            defaultChecked="true"
-            data-switch="success"
-          />
-          <label
-            htmlFor="switch01"
-            data-on-label="Active"
-            data-off-label="In-active"
-            className="mb-0 d-block"
-            style={{ width: "70px" }}
-          />
-        </div>
-      ),
+      // status: (
+      //   <div>
+      //     <input
+      //       type="checkbox"
+      //       id="switch01"
+      //       defaultChecked="true"
+      //       data-switch="success"
+      //     />
+      //     <label
+      //       htmlFor="switch01"
+      //       data-on-label="Active"
+      //       data-off-label="In-active"
+      //       className="mb-0 d-block"
+      //       style={{ width: "70px" }}
+      //     />
+      //   </div>
+      // ),
       action: (
         <div>
-          <a href="#" className="action-icon">
+          {/* <a href="#" className="action-icon">
             <i className="mdi mdi-pencil font-20 icon-color" />
           </a>
           <a href="#" className="action-icon">
             <i className="mdi mdi-delete font-20 icon-color " />
-          </a>
+          </a> */}
           <a href="#" className="action-icon">
             <i className="uil uil-eye font-20 icon-color" />
           </a>
@@ -84,7 +84,7 @@ export const Disruption = () => {
       <div>
         <CustomHeader
           title={"Disruption"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Disruption"}
         />
         <div className="row ">

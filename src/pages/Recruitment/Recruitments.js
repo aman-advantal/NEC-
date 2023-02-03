@@ -103,7 +103,7 @@ export const Recruitments = () => {
       <div>
         <CustomHeader
           title={"Recruitments"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Recruitments"}
         />
 

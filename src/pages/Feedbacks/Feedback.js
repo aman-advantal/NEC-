@@ -86,7 +86,7 @@ export const Feedback = () => {
       <div>
         <CustomHeader
           title={"FeedBack/Input"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"FeedBack/Input"}
         />
 <div className="row ">

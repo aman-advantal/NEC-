@@ -88,7 +88,7 @@ export const GroundDetail = () => {
       <div>
         <CustomHeader
           title={"Sport Facility"}
-          title1={"Nec"}
+          title1={"NEC"}
           title2={"Ground Details"}
         />
 
